@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FAE244A22EC00384A74 /* AppDelegate.swift */; };
+		89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB0244A22EC00384A74 /* SceneDelegate.swift */; };
+		89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB2244A22EC00384A74 /* ViewController.swift */; };
+		89D99FB6244A22EC00384A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D99FB4244A22EC00384A74 /* Main.storyboard */; };
+		89D99FB8244A22EF00384A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D99FB7244A22EF00384A74 /* Assets.xcassets */; };
+		89D99FBB244A22EF00384A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D99FB9244A22EF00384A74 /* LaunchScreen.storyboard */; };
+		89D99FC6244A22F000384A74 /* TchigomataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FC5244A22F000384A74 /* TchigomataTests.swift */; };
+		89D99FD1244A22F000384A74 /* TchigomataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FD0244A22F000384A74 /* TchigomataUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89D99FC2244A22F000384A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89D99FA3244A22EC00384A74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89D99FAA244A22EC00384A74;
+			remoteInfo = Tchigomata;
+		};
+		89D99FCD244A22F000384A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89D99FA3244A22EC00384A74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89D99FAA244A22EC00384A74;
+			remoteInfo = Tchigomata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89D99FAB244A22EC00384A74 /* Tchigomata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tchigomata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D99FAE244A22EC00384A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89D99FB0244A22EC00384A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		89D99FB2244A22EC00384A74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89D99FB5244A22EC00384A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89D99FB7244A22EF00384A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89D99FBA244A22EF00384A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89D99FBC244A22EF00384A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D99FC1244A22F000384A74 /* TchigomataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TchigomataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D99FC5244A22F000384A74 /* TchigomataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchigomataTests.swift; sourceTree = "<group>"; };
+		89D99FC7244A22F000384A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D99FCC244A22F000384A74 /* TchigomataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TchigomataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D99FD0244A22F000384A74 /* TchigomataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchigomataUITests.swift; sourceTree = "<group>"; };
+		89D99FD2244A22F000384A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89D99FA8244A22EC00384A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FBE244A22F000384A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FC9244A22F000384A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89D99FA2244A22EC00384A74 = {
+			isa = PBXGroup;
+			children = (
+				89D99FAD244A22EC00384A74 /* Tchigomata */,
+				89D99FC4244A22F000384A74 /* TchigomataTests */,
+				89D99FCF244A22F000384A74 /* TchigomataUITests */,
+				89D99FAC244A22EC00384A74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89D99FAC244A22EC00384A74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89D99FAB244A22EC00384A74 /* Tchigomata.app */,
+				89D99FC1244A22F000384A74 /* TchigomataTests.xctest */,
+				89D99FCC244A22F000384A74 /* TchigomataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89D99FAD244A22EC00384A74 /* Tchigomata */ = {
+			isa = PBXGroup;
+			children = (
+				89D99FAE244A22EC00384A74 /* AppDelegate.swift */,
+				89D99FB0244A22EC00384A74 /* SceneDelegate.swift */,
+				89D99FB2244A22EC00384A74 /* ViewController.swift */,
+				89D99FB4244A22EC00384A74 /* Main.storyboard */,
+				89D99FB7244A22EF00384A74 /* Assets.xcassets */,
+				89D99FB9244A22EF00384A74 /* LaunchScreen.storyboard */,
+				89D99FBC244A22EF00384A74 /* Info.plist */,
+			);
+			path = Tchigomata;
+			sourceTree = "<group>";
+		};
+		89D99FC4244A22F000384A74 /* TchigomataTests */ = {
+			isa = PBXGroup;
+			children = (
+				89D99FC5244A22F000384A74 /* TchigomataTests.swift */,
+				89D99FC7244A22F000384A74 /* Info.plist */,
+			);
+			path = TchigomataTests;
+			sourceTree = "<group>";
+		};
+		89D99FCF244A22F000384A74 /* TchigomataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89D99FD0244A22F000384A74 /* TchigomataUITests.swift */,
+				89D99FD2244A22F000384A74 /* Info.plist */,
+			);
+			path = TchigomataUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89D99FAA244A22EC00384A74 /* Tchigomata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89D99FD5244A22F000384A74 /* Build configuration list for PBXNativeTarget "Tchigomata" */;
+			buildPhases = (
+				89D99FA7244A22EC00384A74 /* Sources */,
+				89D99FA8244A22EC00384A74 /* Frameworks */,
+				89D99FA9244A22EC00384A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tchigomata;
+			productName = Tchigomata;
+			productReference = 89D99FAB244A22EC00384A74 /* Tchigomata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89D99FC0244A22F000384A74 /* TchigomataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89D99FD8244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataTests" */;
+			buildPhases = (
+				89D99FBD244A22F000384A74 /* Sources */,
+				89D99FBE244A22F000384A74 /* Frameworks */,
+				89D99FBF244A22F000384A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89D99FC3244A22F000384A74 /* PBXTargetDependency */,
+			);
+			name = TchigomataTests;
+			productName = TchigomataTests;
+			productReference = 89D99FC1244A22F000384A74 /* TchigomataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89D99FCB244A22F000384A74 /* TchigomataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89D99FDB244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataUITests" */;
+			buildPhases = (
+				89D99FC8244A22F000384A74 /* Sources */,
+				89D99FC9244A22F000384A74 /* Frameworks */,
+				89D99FCA244A22F000384A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89D99FCE244A22F000384A74 /* PBXTargetDependency */,
+			);
+			name = TchigomataUITests;
+			productName = TchigomataUITests;
+			productReference = 89D99FCC244A22F000384A74 /* TchigomataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89D99FA3244A22EC00384A74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = NYU;
+				TargetAttributes = {
+					89D99FAA244A22EC00384A74 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					89D99FC0244A22F000384A74 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 89D99FAA244A22EC00384A74;
+					};
+					89D99FCB244A22F000384A74 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 89D99FAA244A22EC00384A74;
+					};
+				};
+			};
+			buildConfigurationList = 89D99FA6244A22EC00384A74 /* Build configuration list for PBXProject "Tchigomata" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89D99FA2244A22EC00384A74;
+			productRefGroup = 89D99FAC244A22EC00384A74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89D99FAA244A22EC00384A74 /* Tchigomata */,
+				89D99FC0244A22F000384A74 /* TchigomataTests */,
+				89D99FCB244A22F000384A74 /* TchigomataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89D99FA9244A22EC00384A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D99FBB244A22EF00384A74 /* LaunchScreen.storyboard in Resources */,
+				89D99FB8244A22EF00384A74 /* Assets.xcassets in Resources */,
+				89D99FB6244A22EC00384A74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FBF244A22F000384A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FCA244A22F000384A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89D99FA7244A22EC00384A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */,
+				89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */,
+				89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FBD244A22F000384A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D99FC6244A22F000384A74 /* TchigomataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89D99FC8244A22F000384A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89D99FD1244A22F000384A74 /* TchigomataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89D99FC3244A22F000384A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89D99FAA244A22EC00384A74 /* Tchigomata */;
+			targetProxy = 89D99FC2244A22F000384A74 /* PBXContainerItemProxy */;
+		};
+		89D99FCE244A22F000384A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89D99FAA244A22EC00384A74 /* Tchigomata */;
+			targetProxy = 89D99FCD244A22F000384A74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89D99FB4244A22EC00384A74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89D99FB5244A22EC00384A74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89D99FB9244A22EF00384A74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89D99FBA244A22EF00384A74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89D99FD3244A22F000384A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89D99FD4244A22F000384A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89D99FD6244A22F000384A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = Tchigomata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.Tchigomata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89D99FD7244A22F000384A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = Tchigomata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.Tchigomata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89D99FD9244A22F000384A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = TchigomataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.TchigomataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tchigomata.app/Tchigomata";
+			};
+			name = Debug;
+		};
+		89D99FDA244A22F000384A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = TchigomataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.TchigomataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tchigomata.app/Tchigomata";
+			};
+			name = Release;
+		};
+		89D99FDC244A22F000384A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = TchigomataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.TchigomataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tchigomata;
+			};
+			name = Debug;
+		};
+		89D99FDD244A22F000384A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C495TNQ288;
+				INFOPLIST_FILE = TchigomataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = NYU.TchigomataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tchigomata;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89D99FA6244A22EC00384A74 /* Build configuration list for PBXProject "Tchigomata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89D99FD3244A22F000384A74 /* Debug */,
+				89D99FD4244A22F000384A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89D99FD5244A22F000384A74 /* Build configuration list for PBXNativeTarget "Tchigomata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89D99FD6244A22F000384A74 /* Debug */,
+				89D99FD7244A22F000384A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89D99FD8244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89D99FD9244A22F000384A74 /* Debug */,
+				89D99FDA244A22F000384A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89D99FDB244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89D99FDC244A22F000384A74 /* Debug */,
+				89D99FDD244A22F000384A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89D99FA3244A22EC00384A74 /* Project object */;
+}
