@@ -1,0 +1,6 @@
+framework module Pods_Tchigomata_TchigomataUITests {
+  umbrella header "Pods-Tchigomata-TchigomataUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

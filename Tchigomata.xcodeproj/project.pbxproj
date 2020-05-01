@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3643CB4D1DE2654669A1E4 /* Pods_Tchigomata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B017F051001664CACD32820 /* Pods_Tchigomata.framework */; };
+		893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C3E38245BD16100CB07C0 /* AddViewController.swift */; };
 		89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FAE244A22EC00384A74 /* AppDelegate.swift */; };
 		89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB0244A22EC00384A74 /* SceneDelegate.swift */; };
 		89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB2244A22EC00384A74 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 		89D99FBB244A22EF00384A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D99FB9244A22EF00384A74 /* LaunchScreen.storyboard */; };
 		89D99FC6244A22F000384A74 /* TchigomataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FC5244A22F000384A74 /* TchigomataTests.swift */; };
 		89D99FD1244A22F000384A74 /* TchigomataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FD0244A22F000384A74 /* TchigomataUITests.swift */; };
+		AE18E6D8ED98F6B5361F1A34 /* Pods_Tchigomata_TchigomataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E19E209073A93622BEBCCA /* Pods_Tchigomata_TchigomataUITests.framework */; };
+		D1AFF327709B743175DC3BF9 /* Pods_TchigomataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA6EAC7DD3ABA199BB4B7 /* Pods_TchigomataTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049CA6EAC7DD3ABA199BB4B7 /* Pods_TchigomataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TchigomataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4919C4DB63D3377AEFF4E83B /* Pods-TchigomataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TchigomataTests.debug.xcconfig"; path = "Target Support Files/Pods-TchigomataTests/Pods-TchigomataTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B017F051001664CACD32820 /* Pods_Tchigomata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tchigomata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5309B46FC17B4453953AC473 /* Pods-TchigomataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TchigomataTests.release.xcconfig"; path = "Target Support Files/Pods-TchigomataTests/Pods-TchigomataTests.release.xcconfig"; sourceTree = "<group>"; };
+		61EC331292109E7E7512D3C7 /* Pods-Tchigomata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata.debug.xcconfig"; path = "Target Support Files/Pods-Tchigomata/Pods-Tchigomata.debug.xcconfig"; sourceTree = "<group>"; };
+		79E19E209073A93622BEBCCA /* Pods_Tchigomata_TchigomataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tchigomata_TchigomataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		893C3E38245BD16100CB07C0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		89D99FAB244A22EC00384A74 /* Tchigomata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tchigomata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D99FAE244A22EC00384A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D99FB0244A22EC00384A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,9 @@
 		89D99FCC244A22F000384A74 /* TchigomataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TchigomataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D99FD0244A22F000384A74 /* TchigomataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TchigomataUITests.swift; sourceTree = "<group>"; };
 		89D99FD2244A22F000384A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1D92143E4A4F5D1D7EFFA96 /* Pods-Tchigomata-TchigomataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata-TchigomataUITests.release.xcconfig"; path = "Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE57986C49E1A469D7169853 /* Pods-Tchigomata-TchigomataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFD60608A81AF08504183302 /* Pods-Tchigomata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata.release.xcconfig"; path = "Target Support Files/Pods-Tchigomata/Pods-Tchigomata.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3643CB4D1DE2654669A1E4 /* Pods_Tchigomata.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1AFF327709B743175DC3BF9 /* Pods_TchigomataTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE18E6D8ED98F6B5361F1A34 /* Pods_Tchigomata_TchigomataUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A541601CE243876A57014CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B017F051001664CACD32820 /* Pods_Tchigomata.framework */,
+				79E19E209073A93622BEBCCA /* Pods_Tchigomata_TchigomataUITests.framework */,
+				049CA6EAC7DD3ABA199BB4B7 /* Pods_TchigomataTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3807302348F6B42294F7AC20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61EC331292109E7E7512D3C7 /* Pods-Tchigomata.debug.xcconfig */,
+				FFD60608A81AF08504183302 /* Pods-Tchigomata.release.xcconfig */,
+				BE57986C49E1A469D7169853 /* Pods-Tchigomata-TchigomataUITests.debug.xcconfig */,
+				B1D92143E4A4F5D1D7EFFA96 /* Pods-Tchigomata-TchigomataUITests.release.xcconfig */,
+				4919C4DB63D3377AEFF4E83B /* Pods-TchigomataTests.debug.xcconfig */,
+				5309B46FC17B4453953AC473 /* Pods-TchigomataTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		89D99FA2244A22EC00384A74 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				89D99FC4244A22F000384A74 /* TchigomataTests */,
 				89D99FCF244A22F000384A74 /* TchigomataUITests */,
 				89D99FAC244A22EC00384A74 /* Products */,
+				3807302348F6B42294F7AC20 /* Pods */,
+				1A541601CE243876A57014CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +148,7 @@
 				89D99FB7244A22EF00384A74 /* Assets.xcassets */,
 				89D99FB9244A22EF00384A74 /* LaunchScreen.storyboard */,
 				89D99FBC244A22EF00384A74 /* Info.plist */,
+				893C3E38245BD16100CB07C0 /* AddViewController.swift */,
 			);
 			path = Tchigomata;
 			sourceTree = "<group>";
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89D99FD5244A22F000384A74 /* Build configuration list for PBXNativeTarget "Tchigomata" */;
 			buildPhases = (
+				E9807DD915D77D73C33EE4F7 /* [CP] Check Pods Manifest.lock */,
 				89D99FA7244A22EC00384A74 /* Sources */,
 				89D99FA8244A22EC00384A74 /* Frameworks */,
 				89D99FA9244A22EC00384A74 /* Resources */,
+				2C42EB6BCE6ED97B7F426909 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89D99FD8244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataTests" */;
 			buildPhases = (
+				ECFCA7C123AB98FF32E88D1C /* [CP] Check Pods Manifest.lock */,
 				89D99FBD244A22F000384A74 /* Sources */,
 				89D99FBE244A22F000384A74 /* Frameworks */,
 				89D99FBF244A22F000384A74 /* Resources */,
@@ -170,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89D99FDB244A22F000384A74 /* Build configuration list for PBXNativeTarget "TchigomataUITests" */;
 			buildPhases = (
+				0FF88621F4216B76028DB217 /* [CP] Check Pods Manifest.lock */,
 				89D99FC8244A22F000384A74 /* Sources */,
 				89D99FC9244A22F000384A74 /* Frameworks */,
 				89D99FCA244A22F000384A74 /* Resources */,
+				BC7B4881C59424B231FCE867 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +302,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FF88621F4216B76028DB217 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tchigomata-TchigomataUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C42EB6BCE6ED97B7F426909 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tchigomata/Pods-Tchigomata-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tchigomata/Pods-Tchigomata-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tchigomata/Pods-Tchigomata-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7B4881C59424B231FCE867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9807DD915D77D73C33EE4F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tchigomata-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECFCA7C123AB98FF32E88D1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TchigomataTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89D99FA7244A22EC00384A74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +412,7 @@
 			files = (
 				89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */,
 				89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */,
+				893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */,
 				89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +584,7 @@
 		};
 		89D99FD6244A22F000384A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61EC331292109E7E7512D3C7 /* Pods-Tchigomata.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +603,7 @@
 		};
 		89D99FD7244A22F000384A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD60608A81AF08504183302 /* Pods-Tchigomata.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +622,7 @@
 		};
 		89D99FD9244A22F000384A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4919C4DB63D3377AEFF4E83B /* Pods-TchigomataTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +645,7 @@
 		};
 		89D99FDA244A22F000384A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5309B46FC17B4453953AC473 /* Pods-TchigomataTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +668,7 @@
 		};
 		89D99FDC244A22F000384A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE57986C49E1A469D7169853 /* Pods-Tchigomata-TchigomataUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +689,7 @@
 		};
 		89D99FDD244A22F000384A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D92143E4A4F5D1D7EFFA96 /* Pods-Tchigomata-TchigomataUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
