@@ -20,13 +20,47 @@ class ViewController: UIViewController, FSCalendarDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         calendar.delegate = self
+        calendar.scope = .week 
         table.delegate = self
         table.dataSource = self
     }
     
     @IBAction func didTapAdd(){
         // show add viewcontroller
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddViewController else{
+            return
+        }
+            
+        vc.title = "New Event"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = {title, body, date in
+            // dismiss Add vc when complete
+            DispatchQueue.main.async {
+                self.navigationController?.popToRootViewController(animated: true)
+                // create new event
+                let new = MyReminder(title: title, date: date, identifier: "id_\(title)")
+                self.models.append(new)
+                self.table.reloadData()
+                // schedule a notification
+                 // content parameter: title, body, sound, etc
+                 let content = UNMutableNotificationContent()
+                 content.title = title
+                 content.sound = .default
+                 content.body = body
+                 // trigger: allow a nofitication be sent based on date/time
+                 let targetDate = date
+                 let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false) // can repeat
+                // request a notification to be added to notification center
+                 let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
+                 UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                     if error != nil{
+                         print("something went wrong when requesting notification")
+                     }
+                 })
+            } // end DispatchQueue
+            
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didTabTest(){
@@ -37,7 +71,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
                 // schedule test
                 self.scheduleTest()
             }
-            else if let error = error{
+            else if error != nil{
                 // raise error
                 print("error: button for testing push notification")
             }
@@ -65,6 +99,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
     
 
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        // when hit a date on calendar
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE MM-dd-YYYY at h:mm a"
         let string = formatter.string(from: date)
@@ -96,6 +131,11 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
+        // convert date to string
+        let date = models[indexPath.row].date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM, dd, YYYY at hh:mm a"
+        cell.detailTextLabel?.text = formatter.string(from: date)
         return cell
     }
 }
