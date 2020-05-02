@@ -33,12 +33,12 @@ class ViewController: UIViewController, FSCalendarDelegate {
             
         vc.title = "New Event"
         vc.navigationItem.largeTitleDisplayMode = .never
-        vc.completion = {title, body, date in
+        vc.completion = {title, body, date, duration in
             // dismiss Add vc when complete
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
                 // create new event
-                let new = MyReminder(title: title, date: date, identifier: "id_\(title)")
+                let new = MyReminder(title: title, date: date, duration: duration, identifier: "id_\(title)")
                 self.models.append(new)
                 self.table.reloadData()
                 // schedule a notification
@@ -62,6 +62,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
+   
     
     @IBAction func didTabTest(){
         // fire test notification in a few seconds
@@ -77,7 +78,6 @@ class ViewController: UIViewController, FSCalendarDelegate {
             }
         })
     }
-    
     func scheduleTest(){
         // schedule a test notification in a few seconds
         // content parameter: title, body, sound, etc
@@ -133,9 +133,12 @@ extension ViewController: UITableViewDataSource{
         cell.textLabel?.text = models[indexPath.row].title
         // convert date to string
         let date = models[indexPath.row].date
+        let duration = models[indexPath.row].duration
         let formatter = DateFormatter()
+        let formatter2 = DateFormatter()
         formatter.dateFormat = "MMM, dd, YYYY at hh:mm a"
-        cell.detailTextLabel?.text = formatter.string(from: date)
+        formatter2.dateFormat = "HH:mm"
+        cell.detailTextLabel?.text = "\(formatter.string(from: date)), duration \(formatter2.string(from: duration))"
         return cell
     }
 }
@@ -143,6 +146,7 @@ extension ViewController: UITableViewDataSource{
 struct MyReminder {
     let title: String
     let date: Date
+    let duration: Date
     let identifier: String
 }
 

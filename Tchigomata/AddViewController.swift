@@ -10,11 +10,12 @@ import UIKit
 
 class AddViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var titleField: UITextField!
-    @IBOutlet var bodyField: UITextField!
+    @IBOutlet var titleField: UITextField! // event name
+    @IBOutlet var bodyField: UITextField! // event type
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var durationPicker: UIDatePicker! // event duration
     
-    public var completion: ((String, String, Date) -> Void)?
+    public var completion: ((String, String, Date, Date) -> Void)?
     
     
     override func viewDidLoad() {
@@ -35,8 +36,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             let bodyText = bodyField.text, !bodyText.isEmpty{
             
             let targetDate = datePicker.date
+            let durationDate = durationPicker.date
             // pass in completion handler from previous vc to get event content
-            completion?(titleText, bodyText, targetDate)
+            completion?(titleText, bodyText, targetDate, durationDate)
         }
         
     }
