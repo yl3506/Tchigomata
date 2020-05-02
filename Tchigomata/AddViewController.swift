@@ -33,7 +33,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @objc func didTapSaveButton(){
         // tap save button, save event to table
         if let titleText = titleField.text, !titleText.isEmpty,
-            let bodyText = bodyField.text, !bodyText.isEmpty{
+            let bodyText = bodyField.text {
             
             let targetDate = datePicker.date
             let durationDate = durationPicker.date

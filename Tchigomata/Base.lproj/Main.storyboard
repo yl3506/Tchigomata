@@ -56,16 +56,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date to view events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-bw-5fd">
+                                <rect key="frame" x="20" y="225" width="309" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7Xj-2O-O7j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xdk-bw-5fd" secondAttribute="trailing" constant="85" id="608-w4-soH"/>
                             <constraint firstItem="8qi-cv-JTe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BSb-Qs-uaB"/>
                             <constraint firstItem="SeR-Sn-OpW" firstAttribute="top" secondItem="8qi-cv-JTe" secondAttribute="bottom" id="I6t-cS-9vb"/>
                             <constraint firstItem="8qi-cv-JTe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lwj-qf-H3X"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8qi-cv-JTe" secondAttribute="trailing" id="PvS-5F-Knw"/>
                             <constraint firstItem="8qi-cv-JTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QxW-dg-kaw"/>
+                            <constraint firstItem="Xdk-bw-5fd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UTu-JB-Nlf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SeR-Sn-OpW" secondAttribute="trailing" id="fVS-0f-dl3"/>
                             <constraint firstItem="8qi-cv-JTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nKn-9e-0En"/>
+                            <constraint firstItem="Xdk-bw-5fd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="85" id="rOj-dH-db6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -83,6 +95,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="calendar" destination="8qi-cv-JTe" id="1D0-fB-KOK"/>
+                        <outlet property="curDateLabel" destination="Xdk-bw-5fd" id="5Cg-k1-RB3"/>
                         <outlet property="table" destination="SeR-Sn-OpW" id="Qn1-Ss-gfh"/>
                     </connections>
                 </viewController>
@@ -98,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-TH-uEe">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Name... (required)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-TH-uEe">
                                 <rect key="frame" x="10" y="54" width="394" height="52"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" keyboardKey="YES"/>
@@ -109,7 +122,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Type..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-vV-Xkd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Event Type... (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-vV-Xkd">
                                 <rect key="frame" x="10" y="116" width="394" height="52"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" keyboardKey="YES"/>
@@ -145,7 +158,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOq-V0-61K">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOq-V0-61K">
                                 <rect key="frame" x="0.0" y="467" width="414" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="pmU-tM-PsD"/>
@@ -322,8 +335,8 @@
     </scenes>
     <resources>
         <image name="book.circle" catalog="system" width="64" height="60"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="calendar" width="626" height="692"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="clock" catalog="system" width="64" height="60"/>
         <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
         <image name="gear" catalog="system" width="64" height="58"/>

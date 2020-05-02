@@ -13,16 +13,23 @@ class ViewController: UIViewController, FSCalendarDelegate {
 
     @IBOutlet var calendar: FSCalendar!
     @IBOutlet var table: UITableView!
-    
+    @IBOutlet var curDateLabel: UILabel!
+
     var models = [MyReminder]()
+    var curDateString = String();
     
+    let userDefaults = UserDefaults.standard;
+    var eventDict = Dictionary<String, [MyReminder]>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // initialize calendar
         calendar.delegate = self
-        calendar.scope = .week 
+        calendar.scope = .week
+        // initialize event table
         table.delegate = self
         table.dataSource = self
+
     }
     
     @IBAction func didTapAdd(){
@@ -40,13 +47,16 @@ class ViewController: UIViewController, FSCalendarDelegate {
                 // create new event
                 let new = MyReminder(title: title, date: date, duration: duration, identifier: "id_\(title)")
                 self.models.append(new)
+                self.eventDict[self.curDateString] = self.models
                 self.table.reloadData()
                 // schedule a notification
                  // content parameter: title, body, sound, etc
                  let content = UNMutableNotificationContent()
-                 content.title = title
+                 content.title = "Time to focus!"
                  content.sound = .default
-                 content.body = body
+                 let formatter = DateFormatter()
+                 formatter.dateFormat = "HH:mm"
+                 content.body = "\(title) starts now! Duration: \(formatter.string(from: duration))"
                  // trigger: allow a nofitication be sent based on date/time
                  let targetDate = date
                  let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false) // can repeat
@@ -98,12 +108,22 @@ class ViewController: UIViewController, FSCalendarDelegate {
     }
     
 
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         // when hit a date on calendar
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE MM-dd-YYYY at h:mm a"
+        formatter.dateFormat = "EEEE MM-dd-YYYY"
         let string = formatter.string(from: date)
         print("\(string)")
+        curDateString = string
+        print("curDatestring: \(curDateString)")
+        curDateLabel.text = "Events on \(string):"
+        if eventDict.keys.contains(curDateString){
+            models = eventDict[curDateString] as! [MyReminder]
+        } else{
+            models = [MyReminder]()
+        }
+        table.reloadData()
     }
 
 }
@@ -136,18 +156,23 @@ extension ViewController: UITableViewDataSource{
         let duration = models[indexPath.row].duration
         let formatter = DateFormatter()
         let formatter2 = DateFormatter()
-        formatter.dateFormat = "MMM, dd, YYYY at hh:mm a"
+        formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
         formatter2.dateFormat = "HH:mm"
-        cell.detailTextLabel?.text = "\(formatter.string(from: date)), duration \(formatter2.string(from: duration))"
+        cell.detailTextLabel?.text = "Start: \(formatter.string(from: date)). Duration \(formatter2.string(from: duration))"
         return cell
     }
 }
 
-struct MyReminder {
+
+
+
+
+struct MyReminder{
     let title: String
     let date: Date
     let duration: Date
     let identifier: String
+    
 }
 
 
