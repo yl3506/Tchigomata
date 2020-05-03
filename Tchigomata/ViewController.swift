@@ -176,7 +176,8 @@ extension ViewController: UITableViewDelegate{
                 self.models[indexPath.row] = new // replace the old event
                 self.eventDict[self.curDateString] = self.models // save event array to dictionary
                 self.table.reloadData()
-                // replace the old notification
+                // remove the old notification and schedule a new one
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [oldIdentifier])
                  let content = UNMutableNotificationContent()
                  content.title = "Time to focus!"
                  content.sound = .default
@@ -185,7 +186,7 @@ extension ViewController: UITableViewDelegate{
                 content.body = "\(title) starts now! \(startString). Duration: \(formatter2.string(from: duration)). \(body)"
                  let targetDate = date
                  let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
-                 let request = UNNotificationRequest(identifier: "\(oldIdentifier)", content: content, trigger: trigger)
+                 let request = UNNotificationRequest(identifier: "\(title)_start_\(startString)", content: content, trigger: trigger)
                  UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                      if error != nil{
                          print("something went wrong when requesting notification")

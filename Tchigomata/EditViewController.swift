@@ -37,7 +37,7 @@ struct oldEvent{
     bodyField.text = oldEvent.oldBody
     datePicker.date = oldEvent.oldDate
     durationPicker.date = oldEvent.oldDuration
-    print("old identifier: \(oldEvent.oldIdentifier)")
+    print("old identifier to be removed: \(oldEvent.oldIdentifier)")
  }
  
  
