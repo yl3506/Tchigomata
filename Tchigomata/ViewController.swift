@@ -194,9 +194,12 @@ extension ViewController: UITableViewDelegate{
             } // end DispatchQueue
         }
         navigationController?.pushViewController(vc, animated: true)
-        
     }
+    
+    
+    
 }
+
 
 
 
@@ -207,10 +210,12 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // return table row number
         return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // render each cell in table
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
         // convert date to string
@@ -223,6 +228,23 @@ extension ViewController: UITableViewDataSource{
         cell.detailTextLabel?.text = "Start: \(formatter.string(from: date)). Duration \(formatter2.string(from: duration))"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // enable swipping action
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) { // swipe to delete cell
+            // handle delete (by removing the data from your array and updating the tableview)
+            let identifier = models[indexPath.row].identifier
+            models.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
+            print("notification to remove: \(identifier)")
+        }
+    }
+    
     
 }
 
