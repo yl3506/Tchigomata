@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="101.78571428571428"/>
+            <point key="canvasLocation" x="859" y="106"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="Ygq-cg-qWt">
@@ -413,25 +413,163 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lnz-Mp-hJr"/>
+                        <segue destination="wbB-z1-viR" kind="relationship" relationship="rootViewController" id="HUA-Nf-40e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAZ-Ks-vyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="109.82142857142857"/>
+            <point key="canvasLocation" x="-1261" y="106"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mhN-ti-2i1">
+            <objects>
+                <viewController id="wbB-z1-viR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iee-Rj-JQb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tchigomata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Fc-D2-Bac">
+                                <rect key="frame" x="56" y="140" width="304" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCl-Id-cCe">
+                                <rect key="frame" x="149" y="552" width="62" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calendar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LMG-5X-uvW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2Q-rj-Cqq">
+                                <rect key="frame" x="137" y="433" width="93" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="6qm-mC-BX2" kind="show" id="hgv-8n-Jox"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="F8y-iH-9FM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="thU-vP-4Rd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="266-Ct-DdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230.43478260869566" y="105.80357142857143"/>
+        </scene>
+        <!--One View Controller-->
+        <scene sceneID="6zc-z9-D8H">
+            <objects>
+                <viewController id="ia9-hg-dzc" customClass="OneViewController" customModule="Tchigomata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMX-e7-6Qe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bX2-vL-vaq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zfg-bZ-YHP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ud6-Q3-Zha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="1547"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rWj-a9-MUB">
+            <objects>
+                <viewController id="6qm-mC-BX2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AMs-xl-dOd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="choose your hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-vO-ShO">
+                                <rect key="frame" x="136" y="160" width="142" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnv-7A-bqN">
+                                <rect key="frame" x="44" y="482" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1 hour"/>
+                                <connections>
+                                    <segue destination="ia9-hg-dzc" kind="show" id="Vr8-Bn-07H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REd-ED-suj">
+                                <rect key="frame" x="181" y="482" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="2 hours"/>
+                                <connections>
+                                    <segue destination="e3N-T8-oik" kind="show" id="c2F-5p-zla"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-zj-WAe">
+                                <rect key="frame" x="317" y="482" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="3 hours"/>
+                                <connections>
+                                    <segue destination="hJK-0R-W3q" kind="show" id="JLM-Pp-Ljh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rwi-m9-cz5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cqa-I7-SYY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5v-Bl-QGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="884.59821428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ova-za-eVE">
+            <objects>
+                <viewController id="e3N-T8-oik" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hel-Xm-SwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NkI-0S-KXE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5jp-hD-krX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ex-9D-we4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="1547"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IFM-Um-iDR">
+            <objects>
+                <viewController id="hJK-0R-W3q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VcG-SV-llE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="h1L-Qr-fXN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fEz-5X-wKj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgY-pT-Szr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="1547"/>
         </scene>
     </scenes>
     <resources>
-        <image name="book.circle" catalog="system" width="64" height="60"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar" width="626" height="692"/>
-        <image name="clock" catalog="system" width="64" height="60"/>
-        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="gift" catalog="system" width="64" height="60"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gift" catalog="system" width="128" height="121"/>
         <image name="home" width="1340" height="504"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.circle" catalog="system" width="64" height="60"/>
-        <image name="suit.heart" catalog="system" width="64" height="54"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
     </resources>
 </document>
