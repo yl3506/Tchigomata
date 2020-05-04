@@ -102,7 +102,7 @@ class OneViewController: UIViewController {
 
     extension TimeInterval {
         var time: String {
-            return String(format:"%02d:%02d", Int(self/60),  Int(ceil(truncatingRemainder(dividingBy: 60))) )
+            return String(format:"%02d:%02d", Int(self/60),  Int((truncatingRemainder(dividingBy: 60))) )
         }
     }
     extension Double {

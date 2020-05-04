@@ -45,6 +45,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         OneViewController.screenOff = false
        TestTimerViewController.didExit = false
         TestTimerViewController.screenOff = false
+        SecondViewController.didExit = false
+        SecondViewController.screenOff = false
+        ThirdViewController.didExit = false
+        ThirdViewController.screenOff = false
+
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
@@ -53,6 +58,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
         TestTimerViewController.didExit = true
         OneViewController.didExit = true
+        SecondViewController.didExit = true
+        ThirdViewController.didExit = true
     }
 
 

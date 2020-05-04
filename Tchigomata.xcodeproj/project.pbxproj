@@ -25,6 +25,8 @@
 		D1AFF327709B743175DC3BF9 /* Pods_TchigomataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA6EAC7DD3ABA199BB4B7 /* Pods_TchigomataTests.framework */; };
 		D21E207F245F813700FC46AC /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21E207E245F813700FC46AC /* OneViewController.swift */; };
 		D2E2B4F4245FAEA900133E90 /* TestTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */; };
+		D2E2B4FA2460A36200133E90 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4F92460A36200133E90 /* SecondViewController.swift */; };
+		D2E2B4FC2460A48400133E90 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4FB2460A48400133E90 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		BE57986C49E1A469D7169853 /* Pods-Tchigomata-TchigomataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D21E207E245F813700FC46AC /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
 		D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimerViewController.swift; sourceTree = "<group>"; };
+		D2E2B4F92460A36200133E90 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D2E2B4FB2460A48400133E90 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		FFD60608A81AF08504183302 /* Pods-Tchigomata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata.release.xcconfig"; path = "Target Support Files/Pods-Tchigomata/Pods-Tchigomata.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,7 +169,9 @@
 				8947575924606A1C0004B19E /* RollViewController.swift */,
 				8947575B246076BA0004B19E /* CheckViewController.swift */,
 				D21E207E245F813700FC46AC /* OneViewController.swift */,
+				D2E2B4FB2460A48400133E90 /* ThirdViewController.swift */,
 				8901B254245E245600302C06 /* EditViewController.swift */,
+				D2E2B4F92460A36200133E90 /* SecondViewController.swift */,
 				8901B256245FA7A200302C06 /* HomeViewController.swift */,
 			);
 			path = Tchigomata;
@@ -428,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E2B4FA2460A36200133E90 /* SecondViewController.swift in Sources */,
 				D2E2B4F4245FAEA900133E90 /* TestTimerViewController.swift in Sources */,
 				8901B255245E245600302C06 /* EditViewController.swift in Sources */,
 				89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */,
@@ -437,6 +444,7 @@
 				D21E207F245F813700FC46AC /* OneViewController.swift in Sources */,
 				893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */,
 				8901B257245FA7A200302C06 /* HomeViewController.swift in Sources */,
+				D2E2B4FC2460A48400133E90 /* ThirdViewController.swift in Sources */,
 				89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

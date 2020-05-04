@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -620,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="-35" y="876"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="Ova-za-eVE">
             <objects>
-                <viewController id="e3N-T8-oik" sceneMemberID="viewController">
+                <viewController id="e3N-T8-oik" customClass="SecondViewController" customModule="Tchigomata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hel-Xm-SwZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -636,10 +636,10 @@
             </objects>
             <point key="canvasLocation" x="178" y="1547"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="IFM-Um-iDR">
             <objects>
-                <viewController id="hJK-0R-W3q" sceneMemberID="viewController">
+                <viewController id="hJK-0R-W3q" customClass="ThirdViewController" customModule="Tchigomata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VcG-SV-llE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -799,17 +799,17 @@
     <resources>
         <image name="arrow" width="512" height="512"/>
         <image name="back arrow" width="512" height="512"/>
-        <image name="book.circle" catalog="system" width="64" height="60"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar" width="626" height="692"/>
-        <image name="clock" catalog="system" width="64" height="60"/>
-        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="gift" catalog="system" width="64" height="60"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gift" catalog="system" width="128" height="121"/>
         <image name="home" width="1340" height="504"/>
         <image name="loading" width="1024" height="1024"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.circle" catalog="system" width="64" height="60"/>
-        <image name="suit.heart" catalog="system" width="64" height="54"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
     </resources>
 </document>
