@@ -10,6 +10,7 @@ import UserNotifications
 import UIKit
 
 class ViewController: UIViewController, FSCalendarDelegate {
+    // viewcontroller for calendar section
 
     @IBOutlet var calendar: FSCalendar!
     @IBOutlet var table: UITableView!
@@ -27,7 +28,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         super.viewDidLoad()
         // initialize calendar and date
         calendar.delegate = self
-        calendar.scope = .week
+        calendar.scope = .month
         let formatter = DateFormatter() //formatter for start time
         formatter.dateFormat = "EEEE MM-dd-YYYY"
         curDateString = "\(formatter.string(from: curDate))"
@@ -38,13 +39,16 @@ class ViewController: UIViewController, FSCalendarDelegate {
         table.delegate = self
         table.dataSource = self
         // fetch data from userdefaults
-        print(type(of: ud.value(forKey: "eventDict") as! Dictionary<String, [String]>))
-        for (key, value) in ud.value(forKey: "eventDict") as! Dictionary<String, [String]>{
-            print(key)
-            print(value)
-            eventDict[key] = id_array_to_MyReminder(input: value)
+        if ud.value(forKey: "eventDict") != nil{
+            print(type(of: ud.value(forKey: "eventDict") as! Dictionary<String, [String]>))
+            for (key, value) in ud.value(forKey: "eventDict") as! Dictionary<String, [String]>{
+                print(key)
+                print(value)
+                eventDict[key] = id_array_to_MyReminder(input: value)
+            }
+            models = eventDict[curDateString]!
         }
-        
+  
     }
     
 
@@ -127,6 +131,12 @@ class ViewController: UIViewController, FSCalendarDelegate {
             result.append(event.identifier)
         }
         return result
+    }
+    
+    
+    @IBAction func didTapDone(){
+        // dismiss calendar vc when done
+        self.dismiss(animated: true, completion: nil)
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// testing
