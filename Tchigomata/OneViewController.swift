@@ -9,8 +9,11 @@
 import UIKit
 
 class OneViewController: UIViewController {
-
-     let timeLeftShapeLayer = CAShapeLayer()
+        var ud = UserDefaults.standard
+        static var didExit = false
+        static var screenOff = false
+        
+        let timeLeftShapeLayer = CAShapeLayer()
         let bgShapeLayer = CAShapeLayer()
         var timeLeft: TimeInterval = 3600
         var endTime: Date?
@@ -40,8 +43,12 @@ class OneViewController: UIViewController {
             view.addSubview(timeLabel)
         }
         override func viewDidLoad() {
+            let gacha = ud.integer(forKey: "gacha")
+            ud.set(gacha, forKey: "gacha")
             super.viewDidLoad()
             view.backgroundColor = UIColor(white: 0.94, alpha: 1.0)
+            OneViewController.didExit = false
+            OneViewController.screenOff = false
             drawBgShape()
             drawTimeLeftShape()
             addTimeLabel()
@@ -53,19 +60,45 @@ class OneViewController: UIViewController {
             timeLeftShapeLayer.add(strokeIt, forKey: nil)
            
             endTime = Date().addingTimeInterval(timeLeft)
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(OneViewController.updateTime), userInfo: nil, repeats: true)
+            CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
         }
         @objc func updateTime() {
+        var gachaCoins = ud.integer(forKey: "gacha")
+        if OneViewController.didExit {
+                   resetPage()
+                   if !OneViewController.screenOff {
+                       resetPage()
+                       return
+                   }
+               }
+            
         if timeLeft > 0 {
             timeLeft = endTime?.timeIntervalSinceNow ?? 0
             timeLabel.text = timeLeft.time
             } else {
             timeLabel.text = "00:00"
             timer.invalidate()
+            gachaCoins = gachaCoins + 1
+            ud.set(gachaCoins, forKey: "gacha")
+            print(gachaCoins)
+            
             }
         }
+    
+    func resetPage() {
+    timer.invalidate()
+    timeLabel.text = "00:00:00"
+        let alertController = UIAlertController(title: "You started to use your phone!", message: "Your time has been reset", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true) {}
     }
 
+
+    
+}
 
     extension TimeInterval {
         var time: String {
@@ -76,4 +109,11 @@ class OneViewController: UIViewController {
         var degreesToRadians : CGFloat {
             return CGFloat(self) * .pi / 180
         }
+}
+
+private let displayStatusChangedCallback: CFNotificationCallback = { _, cfObserver, cfName, _, _ in
+    guard let lockState = cfName?.rawValue as String? else {
+        return
+    }
+    OneViewController.screenOff = true
 }

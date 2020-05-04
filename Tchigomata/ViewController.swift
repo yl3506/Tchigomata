@@ -25,6 +25,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
     var ud = UserDefaults.standard;
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // initialize calendar and date
         calendar.delegate = self
