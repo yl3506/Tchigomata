@@ -10,7 +10,7 @@
 		5D3643CB4D1DE2654669A1E4 /* Pods_Tchigomata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B017F051001664CACD32820 /* Pods_Tchigomata.framework */; };
 		84B9198C245FB8F200DC059E /* RollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9198B245FB8F200DC059E /* RollViewController.swift */; };
 		84B9198E245FD76C00DC059E /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9198D245FD76C00DC059E /* CheckViewController.swift */; };
-		84B91990245FF4A300DC059E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9198F245FF4A300DC059E /* MainViewController.swift */; };
+		84B91990245FF4A300DC059E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9198F245FF4A300DC059E /* HomeViewController.swift */; };
 		8901B255245E245600302C06 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901B254245E245600302C06 /* EditViewController.swift */; };
 		893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C3E38245BD16100CB07C0 /* AddViewController.swift */; };
 		89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FAE244A22EC00384A74 /* AppDelegate.swift */; };
@@ -52,7 +52,7 @@
 		79E19E209073A93622BEBCCA /* Pods_Tchigomata_TchigomataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tchigomata_TchigomataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B9198B245FB8F200DC059E /* RollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollViewController.swift; sourceTree = "<group>"; };
 		84B9198D245FD76C00DC059E /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
-		84B9198F245FF4A300DC059E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84B9198F245FF4A300DC059E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8901B254245E245600302C06 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		893C3E38245BD16100CB07C0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		89D99FAB244A22EC00384A74 /* Tchigomata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tchigomata.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +163,7 @@
 				8901B254245E245600302C06 /* EditViewController.swift */,
 				84B9198B245FB8F200DC059E /* RollViewController.swift */,
 				84B9198D245FD76C00DC059E /* CheckViewController.swift */,
-				84B9198F245FF4A300DC059E /* MainViewController.swift */,
+				84B9198F245FF4A300DC059E /* HomeViewController.swift */,
 			);
 			path = Tchigomata;
 			sourceTree = "<group>";
@@ -431,7 +431,7 @@
 				89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */,
 				84B9198C245FB8F200DC059E /* RollViewController.swift in Sources */,
 				D21E207F245F813700FC46AC /* OneViewController.swift in Sources */,
-				84B91990245FF4A300DC059E /* MainViewController.swift in Sources */,
+				84B91990245FF4A300DC059E /* HomeViewController.swift in Sources */,
 				893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */,
 				89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */,
 			);

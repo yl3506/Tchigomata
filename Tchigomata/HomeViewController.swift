@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var pet1: UIImageView!
     @IBOutlet weak var pet2: UIImageView!
