@@ -15,24 +15,39 @@ class ViewController: UIViewController, FSCalendarDelegate {
     @IBOutlet var table: UITableView!
     @IBOutlet var curDateLabel: UILabel!
     
-    var models = [MyReminder]() // point to the event array on current date
-    var curDateString = String();
     var curDate = Date();
+    var curDateString = String();
     
-    let userDefaults = UserDefaults.standard;
-    var eventDict = Dictionary<String, [MyReminder]>()
-
+    var eventDict = Dictionary<String, [MyReminder]>();
+    var models = [MyReminder](); // point to the event array on current date
+    
+    var ud = UserDefaults.standard;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // initialize calendar
+        // initialize calendar and date
         calendar.delegate = self
         calendar.scope = .week
+        let formatter = DateFormatter() //formatter for start time
+        formatter.dateFormat = "EEEE MM-dd-YYYY"
+        curDateString = "\(formatter.string(from: curDate))"
+        curDate = formatter.date(from: curDateString)!
+        // initialize label
+        curDateLabel.text = "Events on \(curDateString):"
         // initialize event table
         table.delegate = self
         table.dataSource = self
-
+        // fetch data from userdefaults
+        print(type(of: ud.value(forKey: "eventDict") as! Dictionary<String, [String]>))
+        for (key, value) in ud.value(forKey: "eventDict") as! Dictionary<String, [String]>{
+            print(key)
+            print(value)
+            eventDict[key] = id_array_to_MyReminder(input: value)
+        }
+        
     }
     
+
     @IBAction func didTapAdd(){
         // show add viewcontroller
         guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddViewController else{
@@ -48,8 +63,11 @@ class ViewController: UIViewController, FSCalendarDelegate {
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
                 formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
-                let startString = "\(formatter.string(from: date))"
-                let new = MyReminder(title: title, body: body, date: date, duration: duration, identifier: "\(title)_start_\(startString)")
+                let dateString = "\(formatter.string(from: date))"
+                let formatter2 = DateFormatter() // formatter for duration
+                formatter2.dateFormat = "HH:mm"
+                let durationString = "\(formatter2.string(from: duration))"
+                let new = MyReminder(title: title, body: body, date: date, duration: duration, identifier: "\(title)|\(body)|\(dateString)|\(durationString)")
                 self.models.append(new)
                 self.eventDict[self.curDateString] = self.models // save event array to dictionary
                 self.table.reloadData()
@@ -57,27 +75,59 @@ class ViewController: UIViewController, FSCalendarDelegate {
                  let content = UNMutableNotificationContent()
                  content.title = "Time to focus!"
                  content.sound = .default
-                let formatter2 = DateFormatter() // formatter for duration
-                formatter2.dateFormat = "HH:mm"
-                content.body = "\(title) starts now! \(startString). Duration: \(formatter2.string(from: duration)). \(body)"
+                content.body = "\(title) starts now! \(dateString). Duration: \(durationString). \(body)"
                  // trigger: allow a nofitication be sent based on date/time
                  let targetDate = date
                  let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false) // can repeat
                 // request a notification to be added to notification center
-                 let request = UNNotificationRequest(identifier: "\(title)_start_\(startString)", content: content, trigger: trigger)
+                 let request = UNNotificationRequest(identifier: "\(title)|\(body)|\(dateString)|\(durationString)", content: content, trigger: trigger)
                  UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                      if error != nil{
                          print("something went wrong when requesting notification")
                      }
                  })
+                //save data to userdefaults
+                var udDict = Dictionary<String, [String]>()
+                for (key, events) in self.eventDict{
+                    udDict[key] = self.get_id_array(input: events)
+                }
+                self.ud.set(udDict, forKey: "eventDict")
+                print(self.ud.value(forKey: "eventDict"))
             } // end DispatchQueue
             
         }
         navigationController?.pushViewController(vc, animated: true)
-    }
+        
+    }// end didTapAdd
    
     
+    func id_array_to_MyReminder(input: [String]) -> [MyReminder]{
+        // convert id string array to MyReminder struct array
+        var result = [MyReminder]()
+        for id in input{
+            let vars = id.components(separatedBy: "|")
+            let title = vars[0]
+            let body = vars[1]
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
+            let date = dateformatter.date(from: vars[2])!
+            let durationformatter = DateFormatter()
+            durationformatter.dateFormat = "HH:mm"
+            let duration = durationformatter.date(from: vars[3])!
+            result.append(MyReminder(title: title, body: body, date: date, duration: duration, identifier:id))
+        }
+        
+        return result
+    }
     
+    func get_id_array(input: [MyReminder]) -> [String] {
+        // convert event array to string array
+        var result = [String]()
+        for event in input{
+            result.append(event.identifier)
+        }
+        return result
+    }
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// testing
     @IBAction func didTabTest(){
@@ -124,7 +174,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         let string = formatter.string(from: date)
         curDateString = string
         curDate = date
-        print("curDatestring: \(curDateString)")
+        print("selected curDatestring: \(curDateString)")
         // change label content
         curDateLabel.text = "Events on \(string):"
         // switch to reminder/event array for that date
@@ -136,7 +186,10 @@ class ViewController: UIViewController, FSCalendarDelegate {
         table.reloadData()
     }
 
-}
+    
+    
+    
+} // end class ViewController
 
 
 
@@ -152,7 +205,7 @@ extension ViewController: UITableViewDelegate{
         let oldDuration = models[indexPath.row].duration
         let oldIdentifier = models[indexPath.row].identifier
         
-        // show edit viewcontroller
+        // show edit event viewcontroller
         guard let vc = storyboard?.instantiateViewController(identifier: "edit") as? EditViewController else{
             return
         }
@@ -171,8 +224,11 @@ extension ViewController: UITableViewDelegate{
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
                 formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
-                let startString = "\(formatter.string(from: date))"
-                let new = MyReminder(title: title, body: body, date: date, duration: duration, identifier: "\(title)_start_\(startString)")
+                let dateString = "\(formatter.string(from: date))"
+                let formatter2 = DateFormatter() // formatter for duration
+                formatter2.dateFormat = "HH:mm"
+                let durationString = "\(formatter2.string(from: duration))"
+                let new = MyReminder(title: title, body: body, date: date, duration: duration, identifier: "\(title)|\(body)|\(dateString)|\(durationString)")
                 self.models[indexPath.row] = new // replace the old event
                 self.eventDict[self.curDateString] = self.models // save event array to dictionary
                 self.table.reloadData()
@@ -181,17 +237,22 @@ extension ViewController: UITableViewDelegate{
                  let content = UNMutableNotificationContent()
                  content.title = "Time to focus!"
                  content.sound = .default
-                let formatter2 = DateFormatter() // formatter for duration
-                formatter2.dateFormat = "HH:mm"
-                content.body = "\(title) starts now! \(startString). Duration: \(formatter2.string(from: duration)). \(body)"
+                content.body = "\(title) starts now! \(dateString). Duration: \(durationString). \(body)"
                  let targetDate = date
                  let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
-                 let request = UNNotificationRequest(identifier: "\(title)_start_\(startString)", content: content, trigger: trigger)
+                 let request = UNNotificationRequest(identifier: "\(title)|\(body)|\(dateString)|\(durationString)", content: content, trigger: trigger)
                  UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                      if error != nil{
                          print("something went wrong when requesting notification")
                      }
                  })
+                //save data to userdefaults
+                var udDict = Dictionary<String, [String]>()
+                for (key, events) in self.eventDict{
+                    udDict[key] = self.get_id_array(input: events)
+                }
+                self.ud.set(udDict, forKey: "eventDict")
+                print(self.ud.value(forKey: "eventDict"))
             } // end DispatchQueue
         }
         navigationController?.pushViewController(vc, animated: true)
@@ -237,12 +298,20 @@ extension ViewController: UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) { // swipe to delete cell
-            // handle delete (by removing the data from your array and updating the tableview)
+            // handle delete (by removing the data from array and updating the tableview)
             let identifier = models[indexPath.row].identifier
             models.remove(at: indexPath.row)
+            eventDict[curDateString] = models
             tableView.deleteRows(at: [indexPath], with: .fade)
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
             print("notification to remove: \(identifier)")
+            //save data to userdefaults
+            var udDict = Dictionary<String, [String]>()
+            for (key, events) in self.eventDict{
+                udDict[key] = self.get_id_array(input: events)
+            }
+            self.ud.set(udDict, forKey: "eventDict")
+            print(self.ud.value(forKey: "eventDict"))
         }
     }
     
@@ -253,12 +322,13 @@ extension ViewController: UITableViewDataSource{
 
 
 
-struct MyReminder{
-    let title: String // event name
-    let body: String // event description
-    let date: Date //start time
-    let duration: Date // event duration
-    let identifier: String // event id
+struct MyReminder {
+    var title: String // event name
+    var body: String // event description
+    var date: Date //start time
+    var duration: Date // event duration
+    var identifier: String // event id
+    
     
 }
 
