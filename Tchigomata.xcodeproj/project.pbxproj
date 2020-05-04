@@ -11,6 +11,8 @@
 		8901B255245E245600302C06 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901B254245E245600302C06 /* EditViewController.swift */; };
 		8901B257245FA7A200302C06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901B256245FA7A200302C06 /* HomeViewController.swift */; };
 		893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893C3E38245BD16100CB07C0 /* AddViewController.swift */; };
+		8947575A24606A1C0004B19E /* RollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947575924606A1C0004B19E /* RollViewController.swift */; };
+		8947575C246076BA0004B19E /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947575B246076BA0004B19E /* CheckViewController.swift */; };
 		89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FAE244A22EC00384A74 /* AppDelegate.swift */; };
 		89D99FB1244A22EC00384A74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB0244A22EC00384A74 /* SceneDelegate.swift */; };
 		89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D99FB2244A22EC00384A74 /* ViewController.swift */; };
@@ -52,6 +54,8 @@
 		8901B254245E245600302C06 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		8901B256245FA7A200302C06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		893C3E38245BD16100CB07C0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		8947575924606A1C0004B19E /* RollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollViewController.swift; sourceTree = "<group>"; };
+		8947575B246076BA0004B19E /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
 		89D99FAB244A22EC00384A74 /* Tchigomata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tchigomata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D99FAE244A22EC00384A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D99FB0244A22EC00384A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */,
 				89D99FBC244A22EF00384A74 /* Info.plist */,
 				893C3E38245BD16100CB07C0 /* AddViewController.swift */,
+				8947575924606A1C0004B19E /* RollViewController.swift */,
+				8947575B246076BA0004B19E /* CheckViewController.swift */,
 				D21E207E245F813700FC46AC /* OneViewController.swift */,
 				8901B254245E245600302C06 /* EditViewController.swift */,
 				8901B256245FA7A200302C06 /* HomeViewController.swift */,
@@ -425,7 +431,9 @@
 				D2E2B4F4245FAEA900133E90 /* TestTimerViewController.swift in Sources */,
 				8901B255245E245600302C06 /* EditViewController.swift in Sources */,
 				89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */,
+				8947575C246076BA0004B19E /* CheckViewController.swift in Sources */,
 				89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */,
+				8947575A24606A1C0004B19E /* RollViewController.swift in Sources */,
 				D21E207F245F813700FC46AC /* OneViewController.swift in Sources */,
 				893C3E39245BD16100CB07C0 /* AddViewController.swift in Sources */,
 				8901B257245FA7A200302C06 /* HomeViewController.swift in Sources */,

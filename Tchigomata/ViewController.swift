@@ -65,6 +65,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
             // dismiss Add vc when complete
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
+//                self.navigationController?.pushViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
                 formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
