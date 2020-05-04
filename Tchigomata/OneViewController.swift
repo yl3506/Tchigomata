@@ -43,8 +43,8 @@ class OneViewController: UIViewController {
             view.addSubview(timeLabel)
         }
         override func viewDidLoad() {
-            let gacha = ud.integer(forKey: "gacha")
-            ud.set(gacha, forKey: "gacha")
+            let gacha = ud.integer(forKey: "coins")
+            ud.set(gacha, forKey: "coins")
             super.viewDidLoad()
             view.backgroundColor = UIColor(white: 0.94, alpha: 1.0)
             OneViewController.didExit = false

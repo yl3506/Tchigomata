@@ -32,7 +32,7 @@ class CheckViewController: UIViewController {
     // grey out start button
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaults.set(3, forKey: "coins")
+//        defaults.set(3, forKey: "coins")
     }
     
 
