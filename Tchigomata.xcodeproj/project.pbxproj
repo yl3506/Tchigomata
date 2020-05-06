@@ -25,6 +25,7 @@
 		AE18E6D8ED98F6B5361F1A34 /* Pods_Tchigomata_TchigomataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E19E209073A93622BEBCCA /* Pods_Tchigomata_TchigomataUITests.framework */; };
 		D1AFF327709B743175DC3BF9 /* Pods_TchigomataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA6EAC7DD3ABA199BB4B7 /* Pods_TchigomataTests.framework */; };
 		D21E207F245F813700FC46AC /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21E207E245F813700FC46AC /* OneViewController.swift */; };
+		D2DCB91024634C17007DF4A5 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCB90F24634C17007DF4A5 /* ChooseViewController.swift */; };
 		D2E2B4F4245FAEA900133E90 /* TestTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */; };
 		D2E2B4FA2460A36200133E90 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4F92460A36200133E90 /* SecondViewController.swift */; };
 		D2E2B4FC2460A48400133E90 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2B4FB2460A48400133E90 /* ThirdViewController.swift */; };
@@ -77,6 +78,7 @@
 		B1D92143E4A4F5D1D7EFFA96 /* Pods-Tchigomata-TchigomataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata-TchigomataUITests.release.xcconfig"; path = "Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE57986C49E1A469D7169853 /* Pods-Tchigomata-TchigomataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tchigomata-TchigomataUITests/Pods-Tchigomata-TchigomataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D21E207E245F813700FC46AC /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
+		D2DCB90F24634C17007DF4A5 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimerViewController.swift; sourceTree = "<group>"; };
 		D2E2B4F92460A36200133E90 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D2E2B4FB2460A48400133E90 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				D2E2B4F3245FAEA900133E90 /* TestTimerViewController.swift */,
 				89D99FBC244A22EF00384A74 /* Info.plist */,
 				893C3E38245BD16100CB07C0 /* AddViewController.swift */,
+				D2DCB90F24634C17007DF4A5 /* ChooseViewController.swift */,
 				8947575924606A1C0004B19E /* RollViewController.swift */,
 				8947575B246076BA0004B19E /* CheckViewController.swift */,
 				D21E207E245F813700FC46AC /* OneViewController.swift */,
@@ -442,6 +445,7 @@
 				8901B255245E245600302C06 /* EditViewController.swift in Sources */,
 				89D99FB3244A22EC00384A74 /* ViewController.swift in Sources */,
 				8947575C246076BA0004B19E /* CheckViewController.swift in Sources */,
+				D2DCB91024634C17007DF4A5 /* ChooseViewController.swift in Sources */,
 				89D99FAF244A22EC00384A74 /* AppDelegate.swift in Sources */,
 				8947575A24606A1C0004B19E /* RollViewController.swift in Sources */,
 				D21E207F245F813700FC46AC /* OneViewController.swift in Sources */,

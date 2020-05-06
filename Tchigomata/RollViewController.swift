@@ -15,6 +15,10 @@ class RollViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+            backgroundImage.image = UIImage(named: "ios-wallpaper-11.png")
+             backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+            self.view.insertSubview(backgroundImage, at: 0)
         super.viewDidLoad()
         
         // take 3 coins for roll

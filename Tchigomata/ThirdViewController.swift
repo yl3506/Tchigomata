@@ -47,7 +47,10 @@ class ThirdViewController: UIViewController {
                 let gacha = ud.integer(forKey: "coins")
                 ud.set(gacha, forKey: "coins")
                 super.viewDidLoad()
-                view.backgroundColor = UIColor(white: 0.94, alpha: 1.0)
+                let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+                    backgroundImage.image = UIImage(named: "616673.png")
+                     backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+                    self.view.insertSubview(backgroundImage, at: 0)
                 ThirdViewController.didExit = false
                 ThirdViewController.screenOff = false
                 drawBgShape()

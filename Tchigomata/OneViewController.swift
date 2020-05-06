@@ -31,7 +31,7 @@ class OneViewController: UIViewController {
         func drawTimeLeftShape() {
             timeLeftShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX , y: view.frame.midY), radius:
                 100, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
-            timeLeftShapeLayer.strokeColor = UIColor.red.cgColor
+            timeLeftShapeLayer.strokeColor = UIColor.blue.cgColor
             timeLeftShapeLayer.fillColor = UIColor.clear.cgColor
             timeLeftShapeLayer.lineWidth = 15
             view.layer.addSublayer(timeLeftShapeLayer)
@@ -46,7 +46,10 @@ class OneViewController: UIViewController {
             let gacha = ud.integer(forKey: "coins")
             ud.set(gacha, forKey: "coins")
             super.viewDidLoad()
-            view.backgroundColor = UIColor(white: 0.94, alpha: 1.0)
+            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+                backgroundImage.image = UIImage(named: "616673.png")
+                 backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
+                self.view.insertSubview(backgroundImage, at: 0)
             OneViewController.didExit = false
             OneViewController.screenOff = false
             drawBgShape()
