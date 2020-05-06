@@ -93,6 +93,7 @@ class HomeViewController: UIViewController {
             for i in floor ... limit {
                 imageViews[i - floor]?.image = UIImage(named: userPets[i] + ".png")
             }
+            limit -= 6
         }
         forwardArrow.isEnabled = true
         forwardArrow.isHidden = false
