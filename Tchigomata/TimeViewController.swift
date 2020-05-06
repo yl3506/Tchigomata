@@ -8,11 +8,9 @@
 
 import UIKit
 
-import UIKit
-
 class TimeViewController: UIViewController {
-
-    var ud = UserDefaults.standard
+    @IBOutlet var complete_label: UILabel!
+            var ud = UserDefaults.standard
             static var didExit = false
             static var screenOff = false
             
@@ -34,7 +32,7 @@ class TimeViewController: UIViewController {
             func drawTimeLeftShape() {
                 timeLeftShapeLayer.path = UIBezierPath(arcCenter: CGPoint(x: view.frame.midX , y: view.frame.midY), radius:
                     100, startAngle: -90.degreesToRadians, endAngle: 270.degreesToRadians, clockwise: true).cgPath
-                timeLeftShapeLayer.strokeColor = UIColor.blue.cgColor
+                timeLeftShapeLayer.strokeColor = UIColor.red.cgColor
                 timeLeftShapeLayer.fillColor = UIColor.clear.cgColor
                 timeLeftShapeLayer.lineWidth = 15
                 view.layer.addSublayer(timeLeftShapeLayer)
@@ -61,7 +59,7 @@ class TimeViewController: UIViewController {
                
                 strokeIt.fromValue = 0
                 strokeIt.toValue = 1
-//                strokeIt.duration = ud.value(forKey: 'now_duration')
+                strokeIt.duration = 10800
                 
                 timeLeftShapeLayer.add(strokeIt, forKey: nil)
                
@@ -70,7 +68,7 @@ class TimeViewController: UIViewController {
                 CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
             }
             @objc func updateTime() {
-            var gachaCoins = ud.integer(forKey: "gacha")
+            var gachaCoins = ud.integer(forKey: "coins")
             if TimeViewController.didExit {
                        resetPage()
                        if !TimeViewController.screenOff {
@@ -86,7 +84,8 @@ class TimeViewController: UIViewController {
                 timeLabel.text = "00:00"
                 timer.invalidate()
                 gachaCoins = gachaCoins + 3
-                ud.set(gachaCoins, forKey: "gacha")
+                complete_label.text = "Congratulations! Event Completed!"
+                ud.set(gachaCoins, forKey: "coins")
                 print(gachaCoins)
                 
                 }
@@ -114,5 +113,4 @@ class TimeViewController: UIViewController {
         }
         TimeViewController.screenOff = true
     }
-
 
