@@ -9,6 +9,7 @@
 import UIKit
 
 class TestTimerViewController: UIViewController {
+    @IBOutlet var complete_label: UILabel!
         static var didExit = false
         static var screenOff = false
             var ud = UserDefaults.standard
@@ -78,6 +79,7 @@ class TestTimerViewController: UIViewController {
                 timer.invalidate()
                 gachaCoins = gachaCoins + 1
                 ud.set(gachaCoins, forKey: "coins")
+                complete_label.text = "Congratulations! Event Completed!"
                 print(gachaCoins)
                 
                 }

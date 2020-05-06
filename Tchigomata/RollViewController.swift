@@ -16,7 +16,7 @@ class RollViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // take 3 coins for roll
         let coins = defaults.integer(forKey: "coins")
         defaults.set(coins - 3, forKey: "coins")

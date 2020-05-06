@@ -47,7 +47,9 @@ class ViewController: UIViewController, FSCalendarDelegate {
                 print(value)
                 eventDict[key] = id_array_to_MyReminder(input: value)
             }
-            models = eventDict[curDateString]!
+            if eventDict[curDateString] != nil{
+                models = eventDict[curDateString]!
+            }
         }
   
     }
