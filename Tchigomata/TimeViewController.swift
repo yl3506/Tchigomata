@@ -7,16 +7,19 @@
 //
 
 import UIKit
+var ud = UserDefaults.standard
 
 class TimeViewController: UIViewController {
-    @IBOutlet var complete_label: UILabel!
+            @IBOutlet var complete_label: UILabel!
+    @IBOutlet var title_label: UILabel!
+    @IBOutlet var body_label: UILabel!
             var ud = UserDefaults.standard
+            
             static var didExit = false
             static var screenOff = false
-            
             let timeLeftShapeLayer = CAShapeLayer()
             let bgShapeLayer = CAShapeLayer()
-            var timeLeft: TimeInterval = 10800
+            var timeLeft: TimeInterval = 10
             var endTime: Date?
             var timeLabel =  UILabel()
             var timer = Timer()
@@ -57,9 +60,18 @@ class TimeViewController: UIViewController {
                 drawTimeLeftShape()
                 addTimeLabel()
                
+                // retieve event info and calculate duration as seconds
+                let calendar = Calendar.current
+                let comp = calendar.dateComponents([.hour, .minute], from: ud.value(forKey: "nowDuration") as! Date)
+                let hour = comp.hour ?? 0
+                let minute = comp.minute ?? 0
+                let finalSeconds: Double = Double((hour*3600) + (minute*60))
+                title_label.text = ud.value(forKey: "nowTitle") as! String
+                body_label.text = ud.value(forKey: "nowBody") as! String
+                timeLeft = finalSeconds
                 strokeIt.fromValue = 0
                 strokeIt.toValue = 1
-                strokeIt.duration = 10800
+                strokeIt.duration = finalSeconds
                 
                 timeLeftShapeLayer.add(strokeIt, forKey: nil)
                

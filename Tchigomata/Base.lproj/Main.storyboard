@@ -836,7 +836,7 @@
         <!--Time View Controller-->
         <scene sceneID="JIC-fy-Ccz">
             <objects>
-                <viewController id="zVU-0n-5N3" customClass="TimeViewController" customModule="Tchigomata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="time" id="zVU-0n-5N3" customClass="TimeViewController" customModule="Tchigomata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ffw-6B-N6x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -848,18 +848,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZJ-Rw-IDp">
+                                <rect key="frame" x="52" y="97" width="311" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-Hv-YNn">
+                                <rect key="frame" x="52" y="203" width="311" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xIn-sC-nfp"/>
                     </view>
                     <navigationItem key="navigationItem" id="rzB-IF-Ryy"/>
                     <connections>
+                        <outlet property="body_label" destination="Omx-Hv-YNn" id="DP6-xj-s2y"/>
                         <outlet property="complete_label" destination="ume-UK-4DB" id="Ld3-61-kyI"/>
+                        <outlet property="title_label" destination="wZJ-Rw-IDp" id="dXh-9a-5Cj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VeB-th-YxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1301" y="1547"/>
+            <point key="canvasLocation" x="-1301.449275362319" y="1546.875"/>
         </scene>
     </scenes>
     <resources>

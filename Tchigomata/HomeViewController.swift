@@ -46,6 +46,75 @@ class HomeViewController: UIViewController {
         else {
             noPets.isHidden = false
         }
+        
+        // detect if any event is happening now
+        print("--------------- viewwillappear")
+        let formatter = DateFormatter() //formatter for start time
+        formatter.dateFormat = "yyyy-MM-dd"
+        let curDateString = "\(formatter.string(from: Date()))"
+        if defaults.value(forKey: "eventDict") != nil{
+            let eventDict = defaults.value(forKey: "eventDict") as! Dictionary<String, [String]>
+            let curDict = eventDict[curDateString] as! [String]
+            for id in curDict{
+                print("checking event id \(id)")
+                let vars = id.components(separatedBy: "|")
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
+                let start = dateformatter.date(from: vars[2])!
+                let durationformatter = DateFormatter()
+                durationformatter.dateFormat = "HH:mm"
+                let duration = durationformatter.date(from: vars[3])!
+                let calendar = Calendar.current
+                let now = Date()
+                let endcomponents = DateComponents(calendar: calendar, hour: calendar.component(.hour, from:duration), minute: calendar.component(.minute, from:duration))
+                let end = calendar.date(byAdding: endcomponents, to: start)!
+                print("start: \(start)")
+                print("end: \(end)")
+                print("now: \(now)")
+                if start <= now && now <= end { // check within duration
+                    print("hit")
+                    if defaults.value(forKey: "timed") == nil { // no triggered event record
+                        let title = vars[0]
+                        let body = vars[1]
+                        defaults.set(title, forKey: "nowTitle")
+                        defaults.set(body, forKey: "nowBody")
+                        defaults.set(start, forKey: "nowStart")
+                        defaults.set(duration, forKey: "nowDuration")
+                        defaults.set(end, forKey: "nowEnd")
+                        var timed = [String]()
+                        timed.append(id)
+                        // record triggered event and push timing viewcontroller
+                        defaults.set(timed, forKey: "timed")
+                        guard let vc = storyboard?.instantiateViewController(identifier: "time") as? TimeViewController else{
+                            return
+                        }
+                        navigationController?.pushViewController(vc, animated: true)
+                    } else{
+                        var timed = defaults.value(forKey: "timed") as! [String]
+                        if !timed.contains(id){ // event not triggered before
+                            let title = vars[0]
+                            let body = vars[1]
+                            defaults.set(title, forKey: "nowTitle")
+                            defaults.set(body, forKey: "nowBody")
+                            defaults.set(start, forKey: "nowStart")
+                            defaults.set(duration, forKey: "nowDuration")
+                            defaults.set(end, forKey: "nowEnd")
+                            // record triggered event and push timing viewcontroller
+                            timed.append(id)
+                            defaults.set(timed, forKey: "timed")
+                            guard let vc = storyboard?.instantiateViewController(identifier: "time") as? TimeViewController else{
+                                return
+                            }
+                            navigationController?.pushViewController(vc, animated: true)
+                        }
+                    }
+                 } else {
+                    print("not hit")
+                 }
+                
+            }// end for
+            
+        } // end if
     }
     
     

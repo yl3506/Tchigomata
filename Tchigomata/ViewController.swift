@@ -31,7 +31,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         calendar.delegate = self
         calendar.scope = .month
         let formatter = DateFormatter() //formatter for start time
-        formatter.dateFormat = "EEEE MM-dd-YYYY"
+        formatter.dateFormat = "yyyy-MM-dd"
         curDateString = "\(formatter.string(from: curDate))"
         curDate = formatter.date(from: curDateString)!
         // initialize label
@@ -70,7 +70,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
 //                self.navigationController?.pushViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
-                formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
+                formatter.dateFormat = "yyyy-MM-dd HH:mm"
                 let dateString = "\(formatter.string(from: date))"
                 let formatter2 = DateFormatter() // formatter for duration
                 formatter2.dateFormat = "HH:mm"
@@ -117,11 +117,14 @@ class ViewController: UIViewController, FSCalendarDelegate {
             let title = vars[0]
             let body = vars[1]
             let dateformatter = DateFormatter()
-            dateformatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
+            dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
             let date = dateformatter.date(from: vars[2])!
+            print("id_array_toMyReminder title \(title)")
+            print("id_array_toMyReminder date \(date)")
             let durationformatter = DateFormatter()
             durationformatter.dateFormat = "HH:mm"
             let duration = durationformatter.date(from: vars[3])!
+            print("id_array_toMyReminder duration \(duration)")
             result.append(MyReminder(title: title, body: body, date: date, duration: duration, identifier:id))
         }
         
@@ -184,7 +187,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         // when hit a date on calendar
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE MM-dd-YYYY"
+        formatter.dateFormat = "yyyy-MM-dd"
         let string = formatter.string(from: date)
         curDateString = string
         curDate = date
@@ -237,7 +240,7 @@ extension ViewController: UITableViewDelegate{
                 self.navigationController?.popToRootViewController(animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
-                formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
+                formatter.dateFormat = "yyyy-MM-dd HH:mm"
                 let dateString = "\(formatter.string(from: date))"
                 let formatter2 = DateFormatter() // formatter for duration
                 formatter2.dateFormat = "HH:mm"
@@ -299,7 +302,7 @@ extension ViewController: UITableViewDataSource{
         let duration = models[indexPath.row].duration
         let formatter = DateFormatter()
         let formatter2 = DateFormatter()
-        formatter.dateFormat = "EEEE, MM-dd-YYYY, HH:mm a"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
         formatter2.dateFormat = "HH:mm"
         cell.detailTextLabel?.text = "Start: \(formatter.string(from: date)). Duration \(formatter2.string(from: duration))"
         return cell
