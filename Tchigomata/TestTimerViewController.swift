@@ -43,6 +43,7 @@ class TestTimerViewController: UIViewController {
                 view.addSubview(timeLabel)
             }
             override func viewDidLoad() {
+                self.navigationItem.setHidesBackButton(true, animated: false)
                 let gacha = ud.integer(forKey: "gacha")
                 ud.set(gacha, forKey: "gacha")
                 super.viewDidLoad()
@@ -83,11 +84,13 @@ class TestTimerViewController: UIViewController {
                 gachaCoins = gachaCoins + 1
                 ud.set(gachaCoins, forKey: "coins")
                 complete_label.text = "Congratulations! Event Completed!"
+                self.navigationItem.setHidesBackButton(false, animated: true)
                 print(gachaCoins)
                 
                 }
             }
     func resetPage() {
+         self.navigationItem.setHidesBackButton(false, animated: true)
        timer.invalidate()
        timeLabel.text = "00:00:00"
            let alertController = UIAlertController(title: "You started to use your phone!", message: "Your time has been reset", preferredStyle: .alert)

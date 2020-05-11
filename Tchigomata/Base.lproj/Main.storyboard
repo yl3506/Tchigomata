@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -904,20 +904,20 @@
         <image name="108ffa8e-f1d3-4b81-bfb4-256860bfb1e8_200x200 (1)" width="200" height="200"/>
         <image name="arrow" width="512" height="512"/>
         <image name="back arrow" width="512" height="512"/>
-        <image name="book.circle" catalog="system" width="64" height="60"/>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar" width="626" height="692"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="calendar1" width="400" height="400"/>
-        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="coin" width="1000" height="1000"/>
-        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="gift" catalog="system" width="64" height="60"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="gift" catalog="system" width="128" height="121"/>
         <image name="home" width="1340" height="504"/>
         <image name="loading" width="1024" height="1024"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.circle" catalog="system" width="64" height="60"/>
-        <image name="suit.heart" catalog="system" width="64" height="54"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <image name="timer" width="782" height="854"/>
     </resources>
 </document>

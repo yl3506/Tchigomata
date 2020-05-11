@@ -44,6 +44,7 @@ class ThirdViewController: UIViewController {
                 view.addSubview(timeLabel)
             }
             override func viewDidLoad() {
+                 self.navigationItem.setHidesBackButton(true, animated: false)
                 let gacha = ud.integer(forKey: "coins")
                 ud.set(gacha, forKey: "coins")
                 super.viewDidLoad()
@@ -78,6 +79,7 @@ class ThirdViewController: UIViewController {
                    }
                 
             if timeLeft > 0 {
+                self.navigationItem.setHidesBackButton(false, animated: true)
                 timeLeft = endTime?.timeIntervalSinceNow ?? 0
                 timeLabel.text = timeLeft.times
                 } else {
@@ -91,6 +93,7 @@ class ThirdViewController: UIViewController {
             }
         
         func resetPage() {
+             self.navigationItem.setHidesBackButton(false, animated: true)
         timer.invalidate()
         timeLabel.text = "00:00:00"
             let alertController = UIAlertController(title: "You started to use your phone!", message: "Your time has been reset", preferredStyle: .alert)

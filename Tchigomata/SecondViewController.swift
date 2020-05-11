@@ -44,6 +44,7 @@ class SecondViewController: UIViewController {
             view.addSubview(timeLabel)
         }
         override func viewDidLoad() {
+             self.navigationItem.setHidesBackButton(true, animated: false)
             let gacha = ud.integer(forKey: "coins")
             ud.set(gacha, forKey: "coins")
             super.viewDidLoad()
@@ -81,6 +82,7 @@ class SecondViewController: UIViewController {
             timeLeft = endTime?.timeIntervalSinceNow ?? 0
             timeLabel.text = timeLeft.times
             } else {
+             self.navigationItem.setHidesBackButton(false, animated: true)
             timeLabel.text = "00:00"
             timer.invalidate()
             gachaCoins = gachaCoins + 2
@@ -91,6 +93,7 @@ class SecondViewController: UIViewController {
         }
     
     func resetPage() {
+         self.navigationItem.setHidesBackButton(false, animated: true)
     timer.invalidate()
     timeLabel.text = "00:00:00"
         let alertController = UIAlertController(title: "You started to use your phone!", message: "Your time has been reset", preferredStyle: .alert)
