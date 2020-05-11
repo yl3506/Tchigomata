@@ -13,6 +13,7 @@ class TimeViewController: UIViewController {
             @IBOutlet var complete_label: UILabel!
     @IBOutlet var title_label: UILabel!
     @IBOutlet var body_label: UILabel!
+    @IBOutlet var time_label: UILabel!
             var ud = UserDefaults.standard
             
             static var didExit = false
@@ -61,13 +62,22 @@ class TimeViewController: UIViewController {
                 addTimeLabel()
                
                 // retieve event info and calculate duration as seconds
-                let calendar = Calendar.current
-                let comp = calendar.dateComponents([.hour, .minute], from: ud.value(forKey: "nowDuration") as! Date)
-                let hour = comp.hour ?? 0
-                let minute = comp.minute ?? 0
-                let finalSeconds: Double = Double((hour*3600) + (minute*60))
+//                let calendar = Calendar.current
+//                let comp = calendar.dateComponents([.hour, .minute], from: ud.value(forKey: "nowDuration") as! Date)
+//                let hour = comp.hour ?? 0
+//                let minute = comp.minute ?? 0
+                let end = ud.value(forKey: "nowEnd") as! Date
+                let now = Date()
+                let start = ud.value(forKey: "nowStart") as! Date
+                print(end.timeIntervalSince(now))
+//                print(end.timeIntervalSince(start))
+//                let finalSeconds: Double = Double((hour*3600) + (minute*60))
+                let finalSeconds: Double = Double(end.timeIntervalSince(now))
                 title_label.text = ud.value(forKey: "nowTitle") as! String
                 body_label.text = ud.value(forKey: "nowBody") as! String
+                let formatter = DateFormatter()
+                formatter.dateFormat = "HH:mm"
+                time_label.text = "\(formatter.string(from: start)) - \(formatter.string(from: end))"
                 timeLeft = finalSeconds
                 strokeIt.fromValue = 0
                 strokeIt.toValue = 1
