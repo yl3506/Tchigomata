@@ -66,7 +66,8 @@ class ViewController: UIViewController, FSCalendarDelegate {
         vc.completion = {title, body, date, duration in
             // dismiss Add vc when complete
             DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
+//                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popToViewController(self, animated: true)
 //                self.navigationController?.pushViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
@@ -86,6 +87,13 @@ class ViewController: UIViewController, FSCalendarDelegate {
                 content.body = "\(title) starts now! \(dateString). Duration: \(durationString). \(body)"
                  // trigger: allow a nofitication be sent based on date/time
                  let targetDate = date
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { success, error in
+                    if success {
+                        print("notification permission allowed")
+                    } else if error != nil{
+                        print("error requesting notification permission")
+                    }
+                })
                  let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false) // can repeat
                 // request a notification to be added to notification center
                  let request = UNNotificationRequest(identifier: "\(title)|\(body)|\(dateString)|\(durationString)", content: content, trigger: trigger)
@@ -237,7 +245,8 @@ extension ViewController: UITableViewDelegate{
         vc.completion = {title, body, date, duration in
             // dismiss Add vc when complete
             DispatchQueue.main.async {
-                self.navigationController?.popToRootViewController(animated: true)
+//                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popToViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
                 formatter.dateFormat = "yyyy-MM-dd HH:mm"

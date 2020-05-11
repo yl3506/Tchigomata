@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-cv-JTe" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="ixH-0f-Vid"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date to view events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-bw-5fd">
-                                <rect key="frame" x="20" y="396" width="309" height="21"/>
+                                <rect key="frame" x="20" y="448" width="309" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fIv-DO-sia"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Sn-OpW">
-                                <rect key="frame" x="0.0" y="425" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="477" width="414" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="WEs-y3-0JI"/>
@@ -80,18 +80,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="Efr-GG-W3M">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="HIP-Yp-AYD">
-                            <connections>
-                                <action selector="didTapDone" destination="BYZ-38-t0r" id="ih4-4f-9M9"/>
-                            </connections>
-                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="LQz-zV-iZT">
                                 <connections>
                                     <action selector="didTapAdd" destination="BYZ-38-t0r" id="70C-me-Mog"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Test" id="4yk-HN-rzb">
+                            <barButtonItem title="Alert" id="4yk-HN-rzb">
                                 <connections>
                                     <action selector="didTabTest" destination="BYZ-38-t0r" id="dBp-Qs-1Ux"/>
                                 </connections>
@@ -446,7 +441,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calendar" image="calendar1"/>
                                 <connections>
-                                    <segue destination="j4i-Jj-NPc" kind="show" id="MfV-Tu-dJt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zaP-em-tTU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Pets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oge-2f-XNF">
@@ -813,25 +808,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jck-u8-Zau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1436" y="623"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jKU-sh-Pri">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j4i-Jj-NPc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="TFr-BY-pil"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2E-up-kQI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RAP-Py-0uW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-t1-NyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1266.6666666666667" y="-58.258928571428569"/>
         </scene>
         <!--Time View Controller-->
         <scene sceneID="JIC-fy-Ccz">
