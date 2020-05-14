@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Gd-at-nl5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -580,10 +580,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-LW-Ruf">
-                                <rect key="frame" x="182" y="605" width="52" height="30"/>
+                                <rect key="frame" x="172" y="623" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.70611427729999998" green="0.92659391300000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Give Up  ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="giveupaction:" destination="ia9-hg-dzc" eventType="touchUpInside" id="b6d-H8-LWu"/>
@@ -683,10 +685,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-to-Ns3">
-                                <rect key="frame" x="181" y="595" width="52" height="30"/>
+                                <rect key="frame" x="172" y="621" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.70611427729999998" green="0.92659391300000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Give Up  ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="giveupaction:" destination="e3N-T8-oik" eventType="touchUpInside" id="JyW-k1-emb"/>
@@ -752,7 +756,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUq-8I-6vd">
-                                <rect key="frame" x="20" y="594" width="374" height="130"/>
+                                <rect key="frame" x="20" y="629" width="374" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -766,10 +770,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-RL-6kD">
-                                <rect key="frame" x="178" y="571" width="58" height="67"/>
+                                <rect key="frame" x="171" y="599" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.70611427729999998" green="0.92659391300000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Give Up  ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="giveupaction:" destination="1Ji-Yp-viO" eventType="touchUpInside" id="FfT-3p-Wgo"/>
@@ -906,7 +912,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ume-UK-4DB">
-                                <rect key="frame" x="20" y="621" width="374" height="130"/>
+                                <rect key="frame" x="20" y="656" width="374" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -934,11 +940,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-by-Ldn">
-                                <rect key="frame" x="181" y="583" width="52" height="30"/>
+                                <rect key="frame" x="170" y="625" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <color key="backgroundColor" red="0.70611427729999998" green="0.92659391300000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Give Up  "/>
                                 <connections>
                                     <action selector="giveupaction:" destination="zVU-0n-5N3" eventType="touchUpInside" id="V8r-tn-caj"/>
                                 </connections>
@@ -965,20 +971,20 @@
         <image name="108ffa8e-f1d3-4b81-bfb4-256860bfb1e8_200x200 (1)" width="200" height="200"/>
         <image name="arrow" width="512" height="512"/>
         <image name="back arrow" width="512" height="512"/>
-        <image name="book.circle" catalog="system" width="128" height="121"/>
+        <image name="book.circle" catalog="system" width="64" height="60"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="calendar" width="626" height="692"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar1" width="400" height="400"/>
-        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="clock" catalog="system" width="64" height="60"/>
         <image name="coin" width="1000" height="1000"/>
-        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
-        <image name="gift" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="gift" catalog="system" width="64" height="60"/>
         <image name="home" width="1340" height="504"/>
         <image name="loading" width="1024" height="1024"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
-        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
+        <image name="plus.circle" catalog="system" width="64" height="60"/>
+        <image name="suit.heart" catalog="system" width="64" height="54"/>
         <image name="timer" width="782" height="854"/>
     </resources>
 </document>
