@@ -766,7 +766,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-RL-6kD">
-                                <rect key="frame" x="178" y="626" width="58" height="67"/>
+                                <rect key="frame" x="178" y="571" width="58" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Give up">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
