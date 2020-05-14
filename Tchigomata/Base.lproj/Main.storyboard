@@ -579,11 +579,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzh-LW-Ruf">
+                                <rect key="frame" x="182" y="605" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveupaction:" destination="ia9-hg-dzc" eventType="touchUpInside" id="b6d-H8-LWu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bX2-vL-vaq"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zfg-bZ-YHP"/>
+                    <connections>
+                        <outlet property="giveup" destination="dzh-LW-Ruf" id="vEg-Qx-dQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ud6-Q3-Zha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -669,15 +682,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaR-to-Ns3">
+                                <rect key="frame" x="181" y="595" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveupaction:" destination="e3N-T8-oik" eventType="touchUpInside" id="JyW-k1-emb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NkI-0S-KXE"/>
                     </view>
                     <navigationItem key="navigationItem" id="5jp-hD-krX"/>
+                    <connections>
+                        <outlet property="giveup" destination="LaR-to-Ns3" id="Ekh-N8-lmV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ex-9D-we4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="1547"/>
+            <point key="canvasLocation" x="195.6521739130435" y="1546.875"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="IFM-Um-iDR">
@@ -694,15 +720,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gu-zf-usp">
+                                <rect key="frame" x="181" y="611" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveupaction:" destination="hJK-0R-W3q" eventType="touchUpInside" id="jdp-KI-v7B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="h1L-Qr-fXN"/>
                     </view>
                     <navigationItem key="navigationItem" id="fEz-5X-wKj"/>
+                    <connections>
+                        <outlet property="giveup" destination="7gu-zf-usp" id="eD8-1N-iB1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgY-pT-Szr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="1547"/>
+            <point key="canvasLocation" x="879.71014492753625" y="1546.875"/>
         </scene>
         <!--Test Timer View Controller-->
         <scene sceneID="o9d-bU-RgE">
@@ -726,6 +765,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-RL-6kD">
+                                <rect key="frame" x="178" y="626" width="58" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveupaction:" destination="1Ji-Yp-viO" eventType="touchUpInside" id="FfT-3p-Wgo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SyV-0e-5qw"/>
@@ -733,6 +782,7 @@
                     <navigationItem key="navigationItem" id="MMQ-6u-bfz"/>
                     <connections>
                         <outlet property="complete_label" destination="kUq-8I-6vd" id="5r5-6G-3xa"/>
+                        <outlet property="giveup" destination="DIZ-RL-6kD" id="Lyc-UU-2HK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roY-8B-Hfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -883,6 +933,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-by-Ldn">
+                                <rect key="frame" x="181" y="583" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Give up">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveupaction:" destination="zVU-0n-5N3" eventType="touchUpInside" id="V8r-tn-caj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xIn-sC-nfp"/>
@@ -891,6 +951,7 @@
                     <connections>
                         <outlet property="body_label" destination="Omx-Hv-YNn" id="DP6-xj-s2y"/>
                         <outlet property="complete_label" destination="ume-UK-4DB" id="Ld3-61-kyI"/>
+                        <outlet property="giveup" destination="JEr-by-Ldn" id="Or6-ml-TWy"/>
                         <outlet property="time_label" destination="xj0-lA-NFg" id="Rl5-xS-dsd"/>
                         <outlet property="title_label" destination="wZJ-Rw-IDp" id="dXh-9a-5Cj"/>
                     </connections>
@@ -905,8 +966,8 @@
         <image name="arrow" width="512" height="512"/>
         <image name="back arrow" width="512" height="512"/>
         <image name="book.circle" catalog="system" width="128" height="121"/>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar" width="626" height="692"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar1" width="400" height="400"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="coin" width="1000" height="1000"/>

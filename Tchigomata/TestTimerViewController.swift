@@ -9,6 +9,13 @@
 import UIKit
 
 class TestTimerViewController: UIViewController {
+   
+    @IBOutlet weak var giveup: UIButton!
+    @IBAction func giveupaction(_ sender: Any) {
+        giveUp()
+        giveup.isEnabled = false
+    }
+    
     @IBOutlet var complete_label: UILabel!
         static var didExit = false
         static var screenOff = false
@@ -98,6 +105,17 @@ class TestTimerViewController: UIViewController {
            alertController.addAction(cancelAction)
            
            self.present(alertController, animated: true) {}
+       }
+    func giveUp(){
+           timer.invalidate()
+        timeLeftShapeLayer.removeFromSuperlayer()
+           timeLabel.text = "00:00:00"
+           let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+           let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
+           alertController.addAction(cancelAction)
+           
+           self.present(alertController, animated: true) {}
+        self.navigationItem.setHidesBackButton(false, animated: true)
        }
 
                  

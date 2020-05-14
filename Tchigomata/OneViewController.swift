@@ -9,6 +9,12 @@
 import UIKit
 
 class OneViewController: UIViewController {
+    @IBOutlet weak var giveup: UIButton!
+    @IBAction func giveupaction(_ sender: Any) {
+        giveUp()
+        giveup.isEnabled = false
+    }
+    var isPaused = true
         var ud = UserDefaults.standard
         static var didExit = false
         static var screenOff = false
@@ -43,6 +49,7 @@ class OneViewController: UIViewController {
             view.addSubview(timeLabel)
         }
         override func viewDidLoad() {
+
             self.navigationItem.setHidesBackButton(true, animated: false)
             let gacha = ud.integer(forKey: "coins")
             ud.set(gacha, forKey: "coins")
@@ -84,12 +91,13 @@ class OneViewController: UIViewController {
             self.navigationItem.setHidesBackButton(false, animated: true)
             timeLabel.text = "00:00"
             timer.invalidate()
-            gachaCoins = gachaCoins + 1
+            gachaCoins = gachaCoins + 3
             ud.set(gachaCoins, forKey: "gacha")
             print(gachaCoins)
             
             }
         }
+   
     
     func resetPage() {
         self.navigationItem.setHidesBackButton(false, animated: true)
@@ -101,6 +109,17 @@ class OneViewController: UIViewController {
         
         self.present(alertController, animated: true) {}
     }
+    func giveUp(){
+           timer.invalidate()
+        timeLeftShapeLayer.removeFromSuperlayer()
+           timeLabel.text = "00:00:00"
+           let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+           let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
+           alertController.addAction(cancelAction)
+           
+           self.present(alertController, animated: true) {}
+        self.navigationItem.setHidesBackButton(false, animated: true)
+       }
 
 
     

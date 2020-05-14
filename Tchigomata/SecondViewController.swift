@@ -10,7 +10,12 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
- var ud = UserDefaults.standard
+    @IBAction func giveupaction(_ sender: Any) {
+        giveUp()
+        giveup.isEnabled = false
+    }
+    @IBOutlet weak var giveup: UIButton!
+    var ud = UserDefaults.standard
         static var didExit = false
         static var screenOff = false
         
@@ -101,6 +106,17 @@ class SecondViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true) {}
+    }
+    func giveUp(){
+        timer.invalidate()
+     timeLeftShapeLayer.removeFromSuperlayer()
+        timeLabel.text = "00:00:00"
+        let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true) {}
+     self.navigationItem.setHidesBackButton(false, animated: true)
     }
 
 

@@ -10,7 +10,13 @@ import UIKit
 var ud = UserDefaults.standard
 
 class TimeViewController: UIViewController {
-            @IBOutlet var complete_label: UILabel!
+    @IBOutlet weak var giveup: UIButton!
+    @IBAction func giveupaction(_ sender: Any) {
+        giveUp()
+        giveup.isEnabled = false
+    }
+    
+    @IBOutlet var complete_label: UILabel!
     @IBOutlet var title_label: UILabel!
     @IBOutlet var body_label: UILabel!
     @IBOutlet var time_label: UILabel!
@@ -48,6 +54,7 @@ class TimeViewController: UIViewController {
                 view.addSubview(timeLabel)
             }
             override func viewDidLoad() {
+                self.navigationItem.setHidesBackButton(true, animated: false)
                 let gacha = ud.integer(forKey: "coins")
                 ud.set(gacha, forKey: "coins")
                 super.viewDidLoad()
@@ -107,6 +114,7 @@ class TimeViewController: UIViewController {
                 timer.invalidate()
                 gachaCoins = gachaCoins + 3
                 complete_label.text = "Congratulations! Event Completed!"
+                self.navigationItem.setHidesBackButton(false, animated: true)
                 ud.set(gachaCoins, forKey: "coins")
                 print(gachaCoins)
                 
@@ -114,6 +122,7 @@ class TimeViewController: UIViewController {
             }
         
         func resetPage() {
+            self.navigationItem.setHidesBackButton(false, animated: true)
         timer.invalidate()
         timeLabel.text = "00:00:00"
             let alertController = UIAlertController(title: "You started to use your phone!", message: "Your time has been reset", preferredStyle: .alert)
@@ -122,6 +131,19 @@ class TimeViewController: UIViewController {
             
             self.present(alertController, animated: true) {}
         }
+    func giveUp(){
+           timer.invalidate()
+        timeLeftShapeLayer.removeFromSuperlayer()
+           timeLabel.text = "00:00:00"
+           let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+           let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
+           alertController.addAction(cancelAction)
+           
+           self.present(alertController, animated: true) {}
+        self.navigationItem.setHidesBackButton(false, animated: true)
+       }
+    
+   
 
 
         
