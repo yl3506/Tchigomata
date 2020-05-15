@@ -8,6 +8,7 @@
 import FSCalendar
 import UserNotifications
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController, FSCalendarDelegate {
     // viewcontroller for calendar section
@@ -39,6 +40,10 @@ class ViewController: UIViewController, FSCalendarDelegate {
         // initialize event table
         table.delegate = self
         table.dataSource = self
+//        // access firebase data
+//        let ref = Database.database().reference()
+//        ref.child("userid/password").setValue(332)
+//
         // fetch data from userdefaults
         if ud.value(forKey: "eventDict") != nil{
             print(type(of: ud.value(forKey: "eventDict") as! Dictionary<String, [String]>))
