@@ -74,7 +74,7 @@ class SecondViewController: UIViewController {
             CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
         }
         @objc func updateTime() {
-        var gachaCoins = ud.integer(forKey: "gacha")
+        var gachaCoins = ud.integer(forKey: "coins")
         if SecondViewController.didExit {
                    resetPage()
                    if !SecondViewController.screenOff {
@@ -91,7 +91,7 @@ class SecondViewController: UIViewController {
             timeLabel.text = "00:00"
             timer.invalidate()
             gachaCoins = gachaCoins + 2
-            ud.set(gachaCoins, forKey: "gacha")
+            ud.set(gachaCoins, forKey: "coins")
             print(gachaCoins)
             
             }

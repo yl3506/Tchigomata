@@ -51,8 +51,8 @@ class TestTimerViewController: UIViewController {
             }
             override func viewDidLoad() {
                 self.navigationItem.setHidesBackButton(true, animated: false)
-                let gacha = ud.integer(forKey: "gacha")
-                ud.set(gacha, forKey: "gacha")
+                let gacha = ud.integer(forKey: "coins")
+                ud.set(gacha, forKey: "coins")
                 super.viewDidLoad()
                 let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
                     backgroundImage.image = UIImage(named: "616673.png")

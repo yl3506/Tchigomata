@@ -75,7 +75,7 @@ class OneViewController: UIViewController {
             CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
         }
         @objc func updateTime() {
-        var gachaCoins = ud.integer(forKey: "gacha")
+        var gachaCoins = ud.integer(forKey: "coins")
         if OneViewController.didExit {
                    resetPage()
                    if !OneViewController.screenOff {
@@ -92,7 +92,7 @@ class OneViewController: UIViewController {
             timeLabel.text = "00:00"
             timer.invalidate()
             gachaCoins = gachaCoins + 3
-            ud.set(gachaCoins, forKey: "gacha")
+            ud.set(gachaCoins, forKey: "coins")
             print(gachaCoins)
             
             }
