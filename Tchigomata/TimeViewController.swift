@@ -21,6 +21,7 @@ class TimeViewController: UIViewController {
     @IBOutlet var body_label: UILabel!
     @IBOutlet var time_label: UILabel!
             var ud = UserDefaults.standard
+            var coins_tohave = Int()
             
             static var didExit = false
             static var screenOff = false
@@ -68,18 +69,13 @@ class TimeViewController: UIViewController {
                 drawTimeLeftShape()
                 addTimeLabel()
                
-                // retieve event info and calculate duration as seconds
-//                let calendar = Calendar.current
-//                let comp = calendar.dateComponents([.hour, .minute], from: ud.value(forKey: "nowDuration") as! Date)
-//                let hour = comp.hour ?? 0
-//                let minute = comp.minute ?? 0
+                // retieve event info and calculate duration in seconds
                 let end = ud.value(forKey: "nowEnd") as! Date
                 let now = Date()
                 let start = ud.value(forKey: "nowStart") as! Date
-                print(end.timeIntervalSince(now))
-//                print(end.timeIntervalSince(start))
-//                let finalSeconds: Double = Double((hour*3600) + (minute*60))
                 let finalSeconds: Double = Double(end.timeIntervalSince(now))
+                coins_tohave = Int(floor(finalSeconds/Double(3600))) // computer number of coins gained
+                print(coins_tohave)
                 title_label.text = ud.value(forKey: "nowTitle") as! String
                 body_label.text = ud.value(forKey: "nowBody") as! String
                 let formatter = DateFormatter()
@@ -89,6 +85,7 @@ class TimeViewController: UIViewController {
                 strokeIt.fromValue = 0
                 strokeIt.toValue = 1
                 strokeIt.duration = finalSeconds
+                
                 
                 timeLeftShapeLayer.add(strokeIt, forKey: nil)
                
@@ -112,8 +109,8 @@ class TimeViewController: UIViewController {
                 } else {
                 timeLabel.text = "00:00"
                 timer.invalidate()
-                gachaCoins = gachaCoins + 3
-                complete_label.text = "Congratulations! Event Completed!"
+                gachaCoins = gachaCoins + coins_tohave
+                complete_label.text = "Congratulations! Event Completed! #Coins gained: \(coins_tohave)"
                 self.navigationItem.setHidesBackButton(false, animated: true)
                 ud.set(gachaCoins, forKey: "coins")
                 print(gachaCoins)
@@ -135,7 +132,7 @@ class TimeViewController: UIViewController {
            timer.invalidate()
         timeLeftShapeLayer.removeFromSuperlayer()
            timeLabel.text = "00:00:00"
-           let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+           let alertController = UIAlertController(title: "Oh no!", message: "You gave up. Try next time!", preferredStyle: .alert)
            let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
            alertController.addAction(cancelAction)
            

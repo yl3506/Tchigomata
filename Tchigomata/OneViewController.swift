@@ -91,7 +91,7 @@ class OneViewController: UIViewController {
             self.navigationItem.setHidesBackButton(false, animated: true)
             timeLabel.text = "00:00"
             timer.invalidate()
-            gachaCoins = gachaCoins + 3
+            gachaCoins = gachaCoins + 1
             ud.set(gachaCoins, forKey: "coins")
             print(gachaCoins)
             
@@ -113,7 +113,7 @@ class OneViewController: UIViewController {
            timer.invalidate()
         timeLeftShapeLayer.removeFromSuperlayer()
            timeLabel.text = "00:00:00"
-           let alertController = UIAlertController(title: "oh no", message: "you gave up", preferredStyle: .alert)
+           let alertController = UIAlertController(title: "Oh no!", message: "You gave up. Try next time.", preferredStyle: .alert)
            let cancelAction = UIAlertAction(title: "OK", style: .default ) { action in print("canceled") }
            alertController.addAction(cancelAction)
            
