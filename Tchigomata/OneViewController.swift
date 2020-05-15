@@ -18,7 +18,7 @@ class OneViewController: UIViewController {
         var ud = UserDefaults.standard
         static var didExit = false
         static var screenOff = false
-        
+        @IBOutlet var complete_label: UILabel! // text to show when event completes
         let timeLeftShapeLayer = CAShapeLayer()
         let bgShapeLayer = CAShapeLayer()
         var timeLeft: TimeInterval = 3600
@@ -92,6 +92,7 @@ class OneViewController: UIViewController {
             timeLabel.text = "00:00"
             timer.invalidate()
             gachaCoins = gachaCoins + 1
+            complete_label.text = "Congratulations! Event Completed! #Coins gained: 1"
             ud.set(gachaCoins, forKey: "coins")
             print(gachaCoins)
             

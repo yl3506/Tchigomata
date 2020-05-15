@@ -21,7 +21,7 @@ class TimeViewController: UIViewController {
     @IBOutlet var body_label: UILabel!
     @IBOutlet var time_label: UILabel!
             var ud = UserDefaults.standard
-            var coins_tohave = Int()
+            var coins_tohave = Int() // number of coins gained from this event, 1 hour = 1 coin
             
             static var didExit = false
             static var screenOff = false

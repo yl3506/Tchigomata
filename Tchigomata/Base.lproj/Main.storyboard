@@ -591,12 +591,20 @@
                                     <action selector="giveupaction:" destination="ia9-hg-dzc" eventType="touchUpInside" id="b6d-H8-LWu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1o-Gi-VYP">
+                                <rect key="frame" x="30" y="661" width="354" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bX2-vL-vaq"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zfg-bZ-YHP"/>
                     <connections>
+                        <outlet property="complete_label" destination="l1o-Gi-VYP" id="mJI-Cv-sLG"/>
                         <outlet property="giveup" destination="dzh-LW-Ruf" id="vEg-Qx-dQo"/>
                     </connections>
                 </viewController>
@@ -696,12 +704,20 @@
                                     <action selector="giveupaction:" destination="e3N-T8-oik" eventType="touchUpInside" id="JyW-k1-emb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-nL-A1b">
+                                <rect key="frame" x="30" y="649" width="354" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NkI-0S-KXE"/>
                     </view>
                     <navigationItem key="navigationItem" id="5jp-hD-krX"/>
                     <connections>
+                        <outlet property="complete_label" destination="hlY-nL-A1b" id="AKE-YO-mfQ"/>
                         <outlet property="giveup" destination="LaR-to-Ns3" id="Ekh-N8-lmV"/>
                     </connections>
                 </viewController>
@@ -725,21 +741,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gu-zf-usp">
-                                <rect key="frame" x="181" y="611" width="52" height="30"/>
+                                <rect key="frame" x="173" y="611" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Give up">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                                <color key="backgroundColor" red="0.70611427729999998" green="0.92659391300000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="  Give up  "/>
                                 <connections>
                                     <action selector="giveupaction:" destination="hJK-0R-W3q" eventType="touchUpInside" id="jdp-KI-v7B"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9R-t2-Lyd">
+                                <rect key="frame" x="30" y="640" width="354" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="h1L-Qr-fXN"/>
                     </view>
                     <navigationItem key="navigationItem" id="fEz-5X-wKj"/>
                     <connections>
+                        <outlet property="complete_label" destination="Q9R-t2-Lyd" id="sfl-AR-qWP"/>
                         <outlet property="giveup" destination="7gu-zf-usp" id="eD8-1N-iB1"/>
                     </connections>
                 </viewController>

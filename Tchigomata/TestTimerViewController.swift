@@ -16,7 +16,7 @@ class TestTimerViewController: UIViewController {
         giveup.isEnabled = false
     }
     
-    @IBOutlet var complete_label: UILabel!
+    @IBOutlet var complete_label: UILabel! // text to show when event completes
         static var didExit = false
         static var screenOff = false
             var ud = UserDefaults.standard
