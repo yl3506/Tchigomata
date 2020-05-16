@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         
         if(defaults.array(forKey: "pets") != nil) {
             userPets = defaults.array(forKey: "pets") as! [String]
+            noPets.isHidden = true
             if(userPets.count > 6)
             {
                 limit = 5;
@@ -69,9 +70,6 @@ class HomeViewController: UIViewController {
                     let now = Date()
                     let endcomponents = DateComponents(calendar: calendar, hour: calendar.component(.hour, from:duration), minute: calendar.component(.minute, from:duration))
                     let end = calendar.date(byAdding: endcomponents, to: start)!
-//                    print("start: \(start)")
-//                    print("end: \(end)")
-//                    print("now: \(now)")
                     if start <= now && now <= end { // check within duration
                         print("hit")
                         if defaults.value(forKey: "timed") == nil { // no triggered event record
@@ -176,7 +174,6 @@ class HomeViewController: UIViewController {
        backgroundImage.image = UIImage(named: "616673.png")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
        self.view.insertSubview(backgroundImage, at: 0)
-        print("-------viewdidload")
 
     }
     

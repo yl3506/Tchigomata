@@ -8,7 +8,7 @@
 import FSCalendar
 import UserNotifications
 import UIKit
-import FirebaseDatabase
+//import FirebaseDatabase
 
 class ViewController: UIViewController, FSCalendarDelegate {
     // viewcontroller for calendar section
@@ -40,10 +40,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         // initialize event table
         table.delegate = self
         table.dataSource = self
-//        // access firebase data
-//        let ref = Database.database().reference()
-//        ref.child("userid/password").setValue(332)
-//
+
         // fetch data from userdefaults
         if ud.value(forKey: "eventDict") != nil{
             print(type(of: ud.value(forKey: "eventDict") as! Dictionary<String, [String]>))
@@ -65,15 +62,12 @@ class ViewController: UIViewController, FSCalendarDelegate {
         guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddViewController else{
             return
         }
-            
         vc.title = "New Event"
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.completion = {title, body, date, duration in
             // dismiss Add vc when complete
             DispatchQueue.main.async {
-//                self.navigationController?.popToRootViewController(animated: true)
                 self.navigationController?.popToViewController(self, animated: true)
-//                self.navigationController?.pushViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time
                 formatter.dateFormat = "yyyy-MM-dd HH:mm"
@@ -99,7 +93,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
                         print("error requesting notification permission")
                     }
                 })
-                 let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false) // can repeat
+                 let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
                 // request a notification to be added to notification center
                  let request = UNNotificationRequest(identifier: "\(title)|\(body)|\(dateString)|\(durationString)", content: content, trigger: trigger)
                  UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
@@ -107,13 +101,12 @@ class ViewController: UIViewController, FSCalendarDelegate {
                          print("something went wrong when requesting notification")
                      }
                  })
-                //save data to userdefaults
+                //save eventDict to userdefaults
                 var udDict = Dictionary<String, [String]>()
                 for (key, events) in self.eventDict{
                     udDict[key] = self.get_id_array(input: events)
                 }
                 self.ud.set(udDict, forKey: "eventDict")
-                print(self.ud.value(forKey: "eventDict"))
             } // end DispatchQueue
             
         }
@@ -140,7 +133,6 @@ class ViewController: UIViewController, FSCalendarDelegate {
             print("id_array_toMyReminder duration \(duration)")
             result.append(MyReminder(title: title, body: body, date: date, duration: duration, identifier:id))
         }
-        
         return result
     }
     
@@ -159,7 +151,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// testing
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Test button
     @IBAction func didTabTest(){
         // fire test notification in a few seconds
         // get user permission to allow notification
@@ -192,7 +184,7 @@ class ViewController: UIViewController, FSCalendarDelegate {
             }
         })
     }
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// end testing
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// end Test button
 
     
     
@@ -250,7 +242,6 @@ extension ViewController: UITableViewDelegate{
         vc.completion = {title, body, date, duration in
             // dismiss Add vc when complete
             DispatchQueue.main.async {
-//                self.navigationController?.popToRootViewController(animated: true)
                 self.navigationController?.popToViewController(self, animated: true)
                 // create new event
                 let formatter = DateFormatter() //formatter for start time

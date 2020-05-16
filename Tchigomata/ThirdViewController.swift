@@ -92,7 +92,7 @@ class ThirdViewController: UIViewController {
                 timeLabel.text = "00:00"
                 timer.invalidate()
                 gachaCoins = gachaCoins + 3
-                complete_label.text = "Congratulations! Event Completed! #Coins gained: 3"
+                complete_label.text = "Event Completed! #Coins gained: 3"
                 ud.set(gachaCoins, forKey: "coins")
                 print(gachaCoins)
                 

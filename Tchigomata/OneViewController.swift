@@ -92,7 +92,7 @@ class OneViewController: UIViewController {
             timeLabel.text = "00:00"
             timer.invalidate()
             gachaCoins = gachaCoins + 1
-            complete_label.text = "Congratulations! Event Completed! #Coins gained: 1"
+            complete_label.text = "Event Completed! #Coins gained: 1"
             ud.set(gachaCoins, forKey: "coins")
             print(gachaCoins)
             

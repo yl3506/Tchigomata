@@ -18,7 +18,5 @@ target 'Tchigomata' do
   end
 
 pod 'FSCalendar'
-pod 'Firebase/Core'
-pod 'Firebase/Database'
  
 end

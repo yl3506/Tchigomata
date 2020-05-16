@@ -110,7 +110,7 @@ class TimeViewController: UIViewController {
                 timeLabel.text = "00:00"
                 timer.invalidate()
                 gachaCoins = gachaCoins + coins_tohave
-                complete_label.text = "Congratulations! Event Completed! #Coins gained: \(coins_tohave)"
+                complete_label.text = "Event Completed! #Coins gained: \(coins_tohave)"
                 self.navigationItem.setHidesBackButton(false, animated: true)
                 ud.set(gachaCoins, forKey: "coins")
                 print(gachaCoins)

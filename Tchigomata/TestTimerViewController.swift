@@ -90,7 +90,7 @@ class TestTimerViewController: UIViewController {
                 timer.invalidate()
                 gachaCoins = gachaCoins + 1
                 ud.set(gachaCoins, forKey: "coins")
-                complete_label.text = "Congratulations! Event Completed! #Coins gained: 1"
+                complete_label.text = "Event Completed! #Coins gained: 1"
                 self.navigationItem.setHidesBackButton(false, animated: true)
                 print(gachaCoins)
                 
