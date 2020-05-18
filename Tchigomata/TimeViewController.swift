@@ -10,19 +10,23 @@ import UIKit
 var ud = UserDefaults.standard
 
 class TimeViewController: UIViewController {
+    // initialize giveup button
     @IBOutlet weak var giveup: UIButton!
     @IBAction func giveupaction(_ sender: Any) {
         giveUp()
         giveup.isEnabled = false
     }
     
+    // display event info
     @IBOutlet var complete_label: UILabel!
     @IBOutlet var title_label: UILabel!
     @IBOutlet var body_label: UILabel!
     @IBOutlet var time_label: UILabel!
+    // initialize user info
             var ud = UserDefaults.standard
             var coins_tohave = Int() // number of coins gained from this event, 1 hour = 1 coin
             
+    // draw scene
             static var didExit = false
             static var screenOff = false
             let timeLeftShapeLayer = CAShapeLayer()
@@ -54,7 +58,10 @@ class TimeViewController: UIViewController {
                 timeLabel.text = timeLeft.times
                 view.addSubview(timeLabel)
             }
+    
+    
             override func viewDidLoad() {
+                // draw and retrieve info
                 self.navigationItem.setHidesBackButton(true, animated: false)
                 let gacha = ud.integer(forKey: "coins")
                 ud.set(gacha, forKey: "coins")
@@ -89,11 +96,13 @@ class TimeViewController: UIViewController {
                 
                 timeLeftShapeLayer.add(strokeIt, forKey: nil)
                
+                // initialize timer
                 endTime = Date().addingTimeInterval(timeLeft)
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimeViewController.updateTime), userInfo: nil, repeats: true)
                 CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
             }
-            @objc func updateTime() {
+    
+            @objc func updateTime() { // update timer and coins info
             var gachaCoins = ud.integer(forKey: "coins")
             if TimeViewController.didExit {
                        resetPage()
@@ -103,10 +112,10 @@ class TimeViewController: UIViewController {
                        }
                    }
                 
-            if timeLeft > 0 {
+            if timeLeft > 0 { // if time remains
                 timeLeft = endTime?.timeIntervalSinceNow ?? 0
                 timeLabel.text = timeLeft.times
-                } else {
+                } else { // if time is up
                 timeLabel.text = "00:00"
                 timer.invalidate()
                 gachaCoins = gachaCoins + coins_tohave
@@ -118,7 +127,7 @@ class TimeViewController: UIViewController {
                 }
             }
         
-        func resetPage() {
+        func resetPage() { // reset timer when user exits or locks screen
             self.navigationItem.setHidesBackButton(false, animated: true)
         timer.invalidate()
         timeLabel.text = "00:00:00"
@@ -128,7 +137,8 @@ class TimeViewController: UIViewController {
             
             self.present(alertController, animated: true) {}
         }
-    func giveUp(){
+    
+    func giveUp(){ // reset timer when user gives up
            timer.invalidate()
         timeLeftShapeLayer.removeFromSuperlayer()
            timeLabel.text = "00:00:00"
@@ -144,7 +154,8 @@ class TimeViewController: UIViewController {
 
 
         
-    }
+    } // end TimeViewController
+
 
     
 

@@ -9,7 +9,8 @@
 import UIKit
 
 class EditViewController: UIViewController, UITextFieldDelegate {
-
+// viewcontroller to edit an event
+    
  @IBOutlet var titleField: UITextField! // event name
  @IBOutlet var bodyField: UITextField! // event type
  @IBOutlet var datePicker: UIDatePicker!
@@ -17,7 +18,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
  
  public var completion: ((String, String, Date, Date) -> Void)?
     
-struct oldEvent{
+struct oldEvent{ // old event info
     static var oldTitle = String()
     static var oldBody = String()
     static var oldDate = Date() // start time

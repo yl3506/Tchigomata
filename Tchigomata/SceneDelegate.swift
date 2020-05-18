@@ -41,14 +41,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        // set stay focused status
         OneViewController.didExit = false
         OneViewController.screenOff = false
-       TestTimerViewController.didExit = false
+        TestTimerViewController.didExit = false
         TestTimerViewController.screenOff = false
         SecondViewController.didExit = false
         SecondViewController.screenOff = false
         ThirdViewController.didExit = false
         ThirdViewController.screenOff = false
+        TimeViewController.didExit = false
+        TimeViewController.screenOff = false
 
     }
 
@@ -56,10 +59,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        // set stay focused status
         TestTimerViewController.didExit = true
         OneViewController.didExit = true
         SecondViewController.didExit = true
         ThirdViewController.didExit = true
+        TimeViewController.didExit = true
     }
 
 

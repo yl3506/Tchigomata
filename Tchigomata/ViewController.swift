@@ -344,7 +344,7 @@ extension ViewController: UITableViewDataSource{
 
 
 
-struct MyReminder {
+struct MyReminder { // customized Event struct
     var title: String // event name
     var body: String // event description
     var date: Date //start time

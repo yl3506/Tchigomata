@@ -9,6 +9,7 @@
 import UIKit
 
 class CheckViewController: UIViewController {
+    // check if user is eligible for rolling
     
     @IBOutlet weak var numCoins: UILabel!
     @IBOutlet weak var startButton: UIButton!

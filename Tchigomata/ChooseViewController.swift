@@ -9,6 +9,7 @@
 import UIKit
 
 class ChooseViewController: UIViewController {
+    // viewcontroller for choosing duration for immediate timer
 
     override func viewDidLoad() {
         super.viewDidLoad()

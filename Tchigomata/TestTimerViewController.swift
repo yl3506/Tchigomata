@@ -10,16 +10,21 @@ import UIKit
 
 class TestTimerViewController: UIViewController {
    
+    // set up giveup button
     @IBOutlet weak var giveup: UIButton!
     @IBAction func giveupaction(_ sender: Any) {
         giveUp()
         giveup.isEnabled = false
     }
     
+    // display event info
     @IBOutlet var complete_label: UILabel! // text to show when event completes
+    // stay focused status
         static var didExit = false
         static var screenOff = false
+    // userdefaults
             var ud = UserDefaults.standard
+    // draw scene
             let timeLeftShapeLayer = CAShapeLayer()
             let bgShapeLayer = CAShapeLayer()
             var timeLeft: TimeInterval = 10
@@ -49,7 +54,10 @@ class TestTimerViewController: UIViewController {
                 timeLabel.text = timeLeft.time
                 view.addSubview(timeLabel)
             }
+    
+    
             override func viewDidLoad() {
+                // draw and retrieve data
                 self.navigationItem.setHidesBackButton(true, animated: false)
                 let gacha = ud.integer(forKey: "coins")
                 ud.set(gacha, forKey: "coins")
@@ -67,12 +75,14 @@ class TestTimerViewController: UIViewController {
                 strokeIt.duration = 10
                 
                 timeLeftShapeLayer.add(strokeIt, forKey: nil)
-               
+                
+                // initialize timer
                 endTime = Date().addingTimeInterval(timeLeft)
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TestTimerViewController.updateTime), userInfo: nil, repeats: true)
                 CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), Unmanaged.passUnretained(self).toOpaque(), displayStatusChangedCallback, "com.apple.springboard.lockcomplete" as CFString, nil, .deliverImmediately)
             }
-            @objc func updateTime() {
+    
+            @objc func updateTime() { // update timer and coins info
               var gachaCoins = ud.integer(forKey: "coins")
                 if TestTimerViewController.didExit {
                                   resetPage()
@@ -82,10 +92,10 @@ class TestTimerViewController: UIViewController {
                                   }
                               }
                
-            if timeLeft > 0 {
+            if timeLeft > 0 { // if time still remains
                 timeLeft = endTime?.timeIntervalSinceNow ?? 0
                 timeLabel.text = timeLeft.timet
-                } else {
+                } else { // if time is up
                 timeLabel.text = "00:00"
                 timer.invalidate()
                 gachaCoins = gachaCoins + 1
@@ -96,7 +106,7 @@ class TestTimerViewController: UIViewController {
                 
                 }
             }
-    func resetPage() {
+    func resetPage() { // reset timer when user exist or locks screen
          self.navigationItem.setHidesBackButton(false, animated: true)
        timer.invalidate()
        timeLabel.text = "00:00:00"
@@ -106,7 +116,7 @@ class TestTimerViewController: UIViewController {
            
            self.present(alertController, animated: true) {}
        }
-    func giveUp(){
+    func giveUp(){ // reset timer when user gives up
            timer.invalidate()
         timeLeftShapeLayer.removeFromSuperlayer()
            timeLabel.text = "00:00:00"
@@ -125,7 +135,7 @@ class TestTimerViewController: UIViewController {
 
 
 
-        extension TimeInterval {
+        extension TimeInterval { // flexible display
             var timet: String {
                 return String(format:"%02d:%02d", Int(self/60),  Int(ceil(truncatingRemainder(dividingBy: 60))) )
             }

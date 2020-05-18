@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // initialize pets view
     @IBOutlet weak var pet1: UIImageView!
     @IBOutlet weak var pet2: UIImageView!
     @IBOutlet weak var pet3: UIImageView!
@@ -19,19 +20,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backArrow: UIButton!
     @IBOutlet weak var forwardArrow: UIButton!
     @IBOutlet weak var noPets: UILabel!
-    
+    // initialize user data
     let defaults = UserDefaults.standard
     var limit = 0
     
     override func viewWillAppear(_ animated: Bool) {
         var userPets = [String]()
         let imageViews = [pet1, pet2, pet3, pet4, pet5, pet6]
-        
+        // retrieve user pets and display appropriately
         if(defaults.array(forKey: "pets") != nil) {
             userPets = defaults.array(forKey: "pets") as! [String]
             noPets.isHidden = true
             if(userPets.count > 6)
-            {
+            { // 6 pets per page
                 limit = 5;
                 forwardArrow.isHidden = false;
                 forwardArrow.isEnabled = true;
@@ -117,6 +118,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func forwardArrowClick(_ sender: Any) {
+        // click forward arrow to see next page of pets
         backArrow.isEnabled = true
         backArrow.isHidden = false
         
@@ -145,6 +147,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func backArrowClick(_ sender: Any) {
+        // click backward arrow to see previous page of pets
         var userPets = defaults.array(forKey: "pets") as! [String]
         let imageViews = [pet1, pet2, pet3, pet4, pet5, pet6]
         if (limit == 5) {
@@ -169,7 +172,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // load background
        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
        backgroundImage.image = UIImage(named: "616673.png")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill

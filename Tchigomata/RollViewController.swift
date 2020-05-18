@@ -10,6 +10,7 @@ import UIKit
 
 class RollViewController: UIViewController {
     
+    // initialize info
     @IBOutlet weak var petName: UILabel!
     @IBOutlet weak var petImg: UIImageView!
     let defaults = UserDefaults.standard
